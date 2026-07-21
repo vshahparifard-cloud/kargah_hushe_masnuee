@@ -3,17 +3,23 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Slide1Cover from './slides/Slide1Cover';
 import Slide2Roadmap from './slides/Slide2Roadmap';
 import Slide3Ecosystems from './slides/Slide2Ecosystems';
-import Slide4ContextMemory from './slides/Slide4ContextMemory';
-import Slide5PromptEng from './slides/Slide5PromptEng';
-import Slide6PromptPlayground from './slides/Slide6PromptPlayground';
-import Slide7AutoDebug from './slides/Slide3PracticalDev';
-import Slide8MultiModule from './slides/Slide8MultiModule';
-import Slide9ApiSecurity from './slides/Slide4ApiInfra';
-import Slide10CostCalculator from './slides/Slide4ApiInfra';
-import Slide11RagArch from './slides/Slide5AdvancedArch';
-import Slide12MultiAgent from './slides/Slide5AdvancedArch';
-import Slide13ProdDeployment from './slides/Slide13ProdDeployment';
-import Slide14TechStack from './slides/Slide6TechStack';
+import Slide4Antigravity from './slides/Slide4Antigravity';
+import Slide5ClaudeCode from './slides/Slide5ClaudeCode';
+import Slide6CopilotCodex from './slides/Slide6CopilotCodex';
+import Slide7NotebookLM from './slides/Slide7NotebookLM';
+import Slide8ContextMemory from './slides/Slide4ContextMemory';
+import Slide9PromptEng from './slides/Slide5PromptEng';
+import Slide10PromptPlayground from './slides/Slide6PromptPlayground';
+import Slide11AutoDebug from './slides/Slide3PracticalDev';
+import Slide12MultiModule from './slides/Slide8MultiModule';
+import Slide13ApiSecurity from './slides/Slide4ApiInfra';
+import Slide14CostCalculator from './slides/Slide4ApiInfra';
+import Slide15RagArch from './slides/Slide5AdvancedArch';
+import Slide16MultiAgent from './slides/Slide5AdvancedArch';
+import Slide17ToolComparison from './slides/Slide17ToolComparison';
+import Slide18ProdDeployment from './slides/Slide13ProdDeployment';
+import Slide19PracticalLab from './slides/Slide19PracticalLab';
+import Slide20TechStack from './slides/Slide6TechStack';
 
 export default function SlideViewer({ currentSlide, onRestart }) {
   
@@ -26,27 +32,39 @@ export default function SlideViewer({ currentSlide, onRestart }) {
       case 2:
         return <Slide3Ecosystems />;
       case 3:
-        return <Slide4ContextMemory />;
+        return <Slide4Antigravity />;
       case 4:
-        return <Slide5PromptEng />;
+        return <Slide5ClaudeCode />;
       case 5:
-        return <Slide6PromptPlayground />;
+        return <Slide6CopilotCodex />;
       case 6:
-        return <Slide7AutoDebug />;
+        return <Slide7NotebookLM />;
       case 7:
-        return <Slide8MultiModule />;
+        return <Slide8ContextMemory />;
       case 8:
-        return <Slide9ApiSecurity />;
+        return <Slide9PromptEng />;
       case 9:
-        return <Slide10CostCalculator />;
+        return <Slide10PromptPlayground />;
       case 10:
-        return <Slide11RagArch />;
+        return <Slide11AutoDebug />;
       case 11:
-        return <Slide12MultiAgent />;
+        return <Slide12MultiModule />;
       case 12:
-        return <Slide13ProdDeployment />;
+        return <Slide13ApiSecurity />;
       case 13:
-        return <Slide14TechStack onRestart={onRestart} />;
+        return <Slide14CostCalculator />;
+      case 14:
+        return <Slide15RagArch />;
+      case 15:
+        return <Slide16MultiAgent />;
+      case 16:
+        return <Slide17ToolComparison />;
+      case 17:
+        return <Slide18ProdDeployment />;
+      case 18:
+        return <Slide19PracticalLab />;
+      case 19:
+        return <Slide20TechStack onRestart={onRestart} />;
       default:
         return <Slide1Cover />;
     }

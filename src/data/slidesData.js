@@ -19,77 +19,121 @@ export const SLIDES_DATA = [
     category: "سرفصل‌ها",
     instructor: "وحید شهپری فرد",
     hour: "ساعت ۱",
-    description: "نگاهی کامل به زمان‌بندی ۶ ساعته کارگاه: زیست‌بوم‌ها، پرامپت‌نویسی، برنامه‌نویسی ایجنتیک، زیرساخت API، سیستم‌های RAG و معماری‌های چندایجنت."
+    description: "زمان‌بندی کامل ۲۰ اسلاید کارگاه: زیست‌بوم‌ها، Antigravity، Claude Code، Copilot، NotebookLM، پرامپت‌نویسی، زیرساخت API، RAG و چندایجنت‌ها."
   },
   {
     id: 3,
     number: "۰۳",
     title: "مقایسه برترین زیست‌بوم‌های هوش مصنوعی",
-    subtitle: "Google AI Suite در برابر Claude",
+    subtitle: "Google AI Suite در برابر Claude & OpenAI",
     section: "ساعت ۱",
     category: "زیست‌بوم‌ها",
     instructor: "وحید شهپری فرد",
     hour: "ساعت ۱",
-    description: "ارزیابی معماری مدل‌های Google Gemini 1.5/3.6 و Claude 3.5 Sonnet، قابلیت‌های چندوجهی و ابزارهای توسعه‌دهندگان (NotebookLM, Antigravity CLI, Cloud Code)."
+    description: "ارزیابی معماری مدل‌های Google Gemini 1.5/3.6 و Claude 3.5 Sonnet، قابلیت‌های چندوجهی و ابزارهای پیشرفته توسعه."
   },
   {
     id: 4,
     number: "۰۴",
-    title: "مدیریت حافظه و پنجره زمینه (Context Window)",
-    subtitle: "پنجره ۲ میلیون توکنی و تکنیک‌های Caching",
+    title: "محیط توسعه ایجنتیک Antigravity CLI",
+    subtitle: "فریم‌ورک ایجنت چندابزاره و اجرای خودمختار دستورات",
     section: "ساعت ۱",
-    category: "حافظه و زمینه",
+    category: "Antigravity",
     instructor: "وحید شهپری فرد",
     hour: "ساعت ۱",
-    description: "تحلیل بازیابی اسناد در پنجره‌های ۲M توکنی، آزمون Needle in a Haystack، تکنیک‌های Caching زمینه و استراتژی‌های خلاصه‌سازی تاریخچه."
+    description: "تحلیل عمیق محیط Antigravity: اجرای خودمختار دستورات ترمینال، مدیریت پس‌زمینه، زمان‌بندی (Scheduler)، پروتکل MCP و مهارت‌ها (Skills)."
   },
   {
     id: 5,
     number: "۰۵",
-    title: "مهندسی پرامپت ساختاریافته",
-    subtitle: "الگوهای پیشرفته پرامپت‌نویسی مهندسی",
+    title: "زیست‌بوم Claude Code & Anthropic",
+    subtitle: "استدلال برتر، Computer Use و تگ‌های XML",
     section: "ساعت ۲",
-    category: "مهندسی پرامپت",
+    category: "Claude Code",
     instructor: "وحید شهپری فرد",
     hour: "ساعت ۲",
-    description: "تفکیک نقش‌ها، مرزبندی زمینه با تگ‌های XML، تکنیک‌های زنجیره تفکر (Chain-of-Thought) و خروجی‌های ساختاریافته اعتبارسنجی‌شده با Pydantic."
+    description: "بررسی اختصاصی Claude Code و Claude 3.5 Sonnet: ساختار پرامپت‌های XML، زیست‌بوم Artifacts، قابلیت‌های Computer Use و بازسازی خودمختار کدبیس."
   },
   {
     id: 6,
     number: "۰۶",
-    title: "کارگاه عملی و شبیه‌ساز پرامپت‌نویسی",
-    subtitle: "آزمایشگاه پرامپت و کنترل توهم (Hallucination)",
+    title: "GitHub Copilot & OpenAI Codex",
+    subtitle: "تکمیل هوشمند کد، چت در IDE و ایجنت‌های Codex",
     section: "ساعت ۲",
-    category: "پرامپت عملی",
+    category: "Copilot & Codex",
     instructor: "وحید شهپری فرد",
     hour: "ساعت ۲",
-    description: "بررسی نمونه‌های واقعی پرامپت‌های تولید اسکریپت‌های سنگین، کنترل نویز و جلوگیری از توهم مدل‌ها در پاسخ‌دهی."
+    description: "تحلیل تکمیل خودکار کد (Inline Completion)، چت با زمینه پروژه، ساخت خودکار تست‌های واحد و ایجنت‌های کدنویسی مبتنی بر مدل‌های OpenAI Codex."
   },
   {
     id: 7,
     number: "۰۷",
-    title: "توسعه ایجنتیک و اشکال‌زدایی خودکار",
-    subtitle: "حلقه‌های خوداصلاحی و ترمیم کد در ترمینال",
-    section: "ساعت ۳",
-    category: "ایجنت‌های توسعه",
+    title: "NotebookLM & زیست‌بوم Google Flow",
+    subtitle: "سنتز دانش مستند، پادکست صوتی و Google AI Studio",
+    section: "ساعت ۲",
+    category: "NotebookLM",
     instructor: "وحید شهپری فرد",
-    hour: "ساعت ۳",
-    description: "شبیه‌سازی کامل حلقه خوداصلاحی کد: دریافت رد خطای استک‌تریس، تحلیل درخت AST، اعمال پچ اصلاحی و اعتبارسنجی با اجرای تست‌ها."
+    hour: "ساعت ۲",
+    description: "بررسی NotebookLM جهت پژوهش عمیق و RAG مستند، تولید خلاصه صوتی، Google AI Studio و خطوط لوله داده‌ای Gemini Flow / Vertex AI."
   },
   {
     id: 8,
     number: "۰۸",
-    title: "مدیریت پروژه‌های چندماژوله بزرگ",
-    subtitle: "معماری کدبیس‌های گسترده و diffهای نقطه به نقطه",
+    title: "مدیریت حافظه و پنجره زمینه (Context Window)",
+    subtitle: "پنجره ۲ میلیون توکنی و تکنیک‌های Caching",
     section: "ساعت ۳",
-    category: "پروژه‌های چندماژوله",
+    category: "حافظه و زمینه",
     instructor: "وحید شهپری فرد",
     hour: "ساعت ۳",
-    description: "استراتژی‌های شکستن کدبیس‌های چند هزار خطی به نقشه‌های زمینه ماژوله، آگاهی از درخت وابستگی‌ها و بازنویسی تدریجی با چانک‌های diff."
+    description: "تحلیل بازیابی اسناد در پنجره‌های ۲M توکنی، آزمون Needle in a Haystack، تکنیک‌های Caching زمینه و استراتژی‌های خلاصه‌سازی تاریخچه."
   },
   {
     id: 9,
     number: "۰۹",
+    title: "مهندسی پرامپت ساختاریافته",
+    subtitle: "الگوهای پیشرفته پرامپت‌نویسی مهندسی",
+    section: "ساعت ۳",
+    category: "مهندسی پرامپت",
+    instructor: "وحید شهپری فرد",
+    hour: "ساعت ۳",
+    description: "تفکیک نقش‌ها، مرزبندی زمینه با تگ‌های XML، تکنیک‌های زنجیره تفکر (Chain-of-Thought) و خروجی‌های ساختاریافته اعتبارسنجی‌شده با Pydantic."
+  },
+  {
+    id: 10,
+    number: "۱۰",
+    title: "کارگاه عملی و شبیه‌ساز پرامپت‌نویسی",
+    subtitle: "آزمایشگاه پرامپت و کنترل توهم (Hallucination)",
+    section: "ساعت ۳",
+    category: "پرامپت عملی",
+    instructor: "وحید شهپری فرد",
+    hour: "ساعت ۳",
+    description: "بررسی نمونه‌های واقعی پرامپت‌های تولید اسکریپت‌های سنگین، کنترل نویز و جلوگیری از توهم مدل‌ها در پاسخ‌دهی."
+  },
+  {
+    id: 11,
+    number: "۱۱",
+    title: "توسعه ایجنتیک و اشکال‌زدایی خودکار",
+    subtitle: "حلقه‌های خوداصلاحی و ترمیم کد در ترمینال",
+    section: "ساعت ۴",
+    category: "ایجنت‌های توسعه",
+    instructor: "وحید شهپری فرد",
+    hour: "ساعت ۴",
+    description: "شبیه‌سازی کامل حلقه خوداصلاحی کد: دریافت رد خطای استک‌تریس، تحلیل درخت AST، اعمال پچ اصلاحی و اعتبارسنجی با اجرای تست‌ها."
+  },
+  {
+    id: 12,
+    number: "۱۲",
+    title: "مدیریت پروژه‌های چندماژوله بزرگ",
+    subtitle: "معماری کدبیس‌های گسترده و diffهای نقطه به نقطه",
+    section: "ساعت ۴",
+    category: "پروژه‌های چندماژوله",
+    instructor: "وحید شهپری فرد",
+    hour: "ساعت ۴",
+    description: "استراتژی‌های شکستن کدبیس‌های چند هزار خطی به نقشه‌های زمینه ماژوله، آگاهی از درخت وابستگی‌ها و بازنویسی تدریجی با چانک‌های diff."
+  },
+  {
+    id: 13,
+    number: "۱۳",
     title: "امنیت کلیدها و زیرساخت APIها",
     subtitle: "خزانه‌های محرمانه، سهمیه‌ها و Rate Limiting",
     section: "ساعت ۴",
@@ -99,19 +143,19 @@ export const SLIDES_DATA = [
     description: "پیاده‌سازی خزانه‌های رمزنگاری‌شده (Secret Vaults)، پراکسی‌های سمت سرور، مدیریت سهمیه‌های منطقه‌ای و الگوریتم‌های Token Bucket با عقب‌نشینی نمایی."
   },
   {
-    id: 10,
-    number: "۱۰",
+    id: 14,
+    number: "۱۴",
     title: "اقتصاد توکن و محاسبه‌گر هزینه API",
     subtitle: "کنترل بودجه و مسیریابی هوشمند بین مدل‌ها",
-    section: "ساعت ۴",
+    section: "ساعت ۵",
     category: "مدیریت هزینه",
     instructor: "وحید شهپری فرد",
-    hour: "ساعت ۴",
+    hour: "ساعت ۵",
     description: "طراحی سیستم مسیریابی درخواست‌ها بین مدل‌های اقتصادی (Flash) و مدل‌های سنگین (Pro)، همراه با محاسبه‌گر تعاملی هزینه‌ها و توکن‌های ماهانه."
   },
   {
-    id: 11,
-    number: "۱۱",
+    id: 15,
+    number: "۱۵",
     title: "بازیابی افزوده با تولید (RAG)",
     subtitle: "داده‌گاه‌های برداری، Embeddings و بازرتبه‌بندی",
     section: "ساعت ۵",
@@ -121,36 +165,58 @@ export const SLIDES_DATA = [
     description: "چانک‌بندی لغزان اسناد، نگاشت برداری متون، پایگاه‌های داده برداری (Qdrant/Pinecone)، جستجوی ترکیبی (Dense + BM25) و مدل‌های Re-Ranking."
   },
   {
-    id: 12,
-    number: "۱۲",
+    id: 16,
+    number: "۱۶",
     title: "سیستم‌های چندایجنت (Multi-Agent)",
     subtitle: "فراخوانی ابزارها و الگوی استدلال ReAct",
-    section: "ساعت ۶",
+    section: "ساعت ۵",
     category: "سیستم‌های چندایجنت",
     instructor: "وحید شهپری فرد",
-    hour: "ساعت ۶",
+    hour: "ساعت ۵",
     description: "طراحی حلقه‌های خودمختار ReAct، فراخوانی ابزارها (Tool Calling)، پروتکل MCP و شبیه‌ساز تعاملی همکاری ایجنت‌ها (Planner, Executor, Evaluator)."
   },
   {
-    id: 13,
-    number: "۱۳",
+    id: 17,
+    number: "۱۷",
+    title: "ماتریس مقایسه ابزارهای توسعه کد با AI",
+    subtitle: "جدول ارزیابی تعاملی ابزارهای هوش مصنوعی توسعه‌دهندگان",
+    section: "ساعت ۶",
+    category: "مقایسه ابزارها",
+    instructor: "وحید شهپری فرد",
+    hour: "ساعت ۶",
+    description: "مقایسه ویژگی‌ها، قدرت استدلال، سناریوهای کاربرد و سطح خودمختاری ابزارهای Antigravity CLI, Claude Code, GitHub Copilot, Codex و NotebookLM."
+  },
+  {
+    id: 18,
+    number: "۱۸",
     title: "الگوهای استقرار در محیط واقعی (Production)",
     subtitle: "مانیتورینگ ایجنت‌ها، تلمتری و مدیریت حالت",
     section: "ساعت ۶",
     category: "استقرار عملیاتی",
     instructor: "وحید شهپری فرد",
     hour: "ساعت ۶",
-    description: "الگوهای مانیتورینگ ایجنت‌ها، ثبت لاگ‌های ردیابی (Observability & Telemetry)، مدیریت حالت جلسات کاری و جلوگیری از بن‌بست در اجرای نخ‌ها."
+    description: "الگوهای مانیتورینگ ایجنت‌ها، ثبت لاگ‌های ردیابی (Observability & OpenTelemetry)، مدیریت حالت جلسات کاری و جلوگیری از بن‌بست در اجرای نخ‌ها."
   },
   {
-    id: 14,
-    number: "۱۴",
+    id: 19,
+    number: "۱۹",
+    title: "لابراتوار کُد و پیاده‌سازی عملی ایجنت پایتون",
+    subtitle: "ساخت ایجنت کاربردی با FastAPI و Gemini SDK",
+    section: "ساعت ۶",
+    category: "لابراتوار عملی",
+    instructor: "وحید شهپری فرد",
+    hour: "ساعت ۶",
+    description: "پیاده‌سازی کد پایتون یک ایجنت هوشمند با قابلیت Tool Calling، مدیریت استثناها، لاگ‌های ساختاریافته و سرویس‌دهی از طریق API."
+  },
+  {
+    id: 20,
+    number: "۲۰",
     title: "پشته فناوری تسلط‌یافته و جمع‌بندی",
     subtitle: "آموزه‌های کلیدی ۶ ساعت کارگاه و جشن پایانی",
     section: "پایانی",
     category: "پشته فناوری",
     instructor: "وحید شهپری فرد",
     hour: "جمع‌بندی",
-    description: "مرور کامل پشته فناوری تسلط‌یافته (Gemini, Claude, Antigravity, Python, Vector DBs)، چک‌لیست استقرار عملیاتی و جشن اتمام کارگاه."
+    description: "مرور کامل پشته فناوری تسلط‌یافته (Gemini, Claude Code, Antigravity, Copilot, NotebookLM, Vector DBs)، چک‌لیست استقرار و جشن اتمام کارگاه."
   }
 ];
