@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Play, Sparkles, Cpu, Bot, Code, ShieldCheck, ArrowLeft, Clock } from 'lucide-react';
+import { Play, Sparkles, Cpu, Bot, Code, ShieldCheck, ArrowLeft, Clock, FileDown, Loader2 } from 'lucide-react';
+import { generateSyllabusPdf } from '../utils/exportPdf';
 
 export default function Hero({ onStart }) {
+  const [isExporting, setIsExporting] = useState(false);
+
+  const handleExportPdf = () => {
+    generateSyllabusPdf((status) => setIsExporting(status));
+  };
+
   const syllabusHighlights = [
     {
       icon: Cpu,
@@ -98,7 +105,7 @@ export default function Hero({ onStart }) {
           </div>
         </motion.div>
 
-        {/* CTA Button */}
+        {/* CTA Buttons */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -107,12 +114,26 @@ export default function Hero({ onStart }) {
         >
           <button
             onClick={onStart}
-            className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 text-white font-bold text-lg shadow-xl shadow-sky-500/25 hover:shadow-sky-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 overflow-hidden"
+            className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 text-white font-bold text-base sm:text-lg shadow-xl shadow-sky-500/25 hover:shadow-sky-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 overflow-hidden"
           >
             <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <Play className="w-5 h-5 fill-white rotate-180 transition-transform group-hover:scale-110" />
             <span>شروع ارائه اسلایدها (۲۱ بخش)</span>
             <ArrowLeft className="w-5 h-5 text-sky-200 group-hover:-translate-x-1 transition-transform" />
+          </button>
+
+          {/* Download PDF CTA */}
+          <button
+            onClick={handleExportPdf}
+            disabled={isExporting}
+            className="inline-flex items-center gap-2.5 px-6 py-4 rounded-2xl bg-slate-800/90 hover:bg-slate-700 text-sky-300 border border-sky-500/40 font-bold text-base shadow-lg transition-all hover:scale-[1.02] disabled:opacity-50"
+          >
+            {isExporting ? (
+              <Loader2 className="w-5 h-5 animate-spin text-sky-400" />
+            ) : (
+              <FileDown className="w-5 h-5 text-sky-400" />
+            )}
+            <span>{isExporting ? 'در حال تولید PDF...' : 'دانلود PDF سرفصل‌ها'}</span>
           </button>
         </motion.div>
 

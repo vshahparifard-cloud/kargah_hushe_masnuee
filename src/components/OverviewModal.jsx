@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Grid, Check, ArrowLeft } from 'lucide-react';
+import { X, Grid, Check, ArrowLeft, FileDown, Loader2 } from 'lucide-react';
 import { SLIDES_DATA } from '../data/slidesData';
+import { generateSyllabusPdf } from '../utils/exportPdf';
 
 export default function OverviewModal({ isOpen, onClose, currentSlide, onSelectSlide }) {
+  const [isExporting, setIsExporting] = useState(false);
+
   if (!isOpen) return null;
+
+  const handleExportPdf = (e) => {
+    e.stopPropagation();
+    generateSyllabusPdf((status) => setIsExporting(status));
+  };
 
   return (
     <AnimatePresence>
@@ -27,12 +35,23 @@ export default function OverviewModal({ isOpen, onClose, currentSlide, onSelectS
               </div>
             </div>
 
-            <button
-              onClick={onClose}
-              className="p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors border border-slate-700"
-            >
-              <X className="w-5 h-5" />
-            </button>
+            <div className="flex items-center gap-3">
+              <button
+                onClick={handleExportPdf}
+                disabled={isExporting}
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-sky-500/10 hover:bg-sky-500/20 text-sky-300 border border-sky-500/30 transition-all hover:border-sky-400 disabled:opacity-50"
+              >
+                {isExporting ? <Loader2 className="w-3.5 h-3.5 animate-spin text-sky-400" /> : <FileDown className="w-3.5 h-3.5 text-sky-400" />}
+                <span>{isExporting ? 'در حال تولید PDF...' : 'دانلود PDF سرفصل‌ها'}</span>
+              </button>
+
+              <button
+                onClick={onClose}
+                className="p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors border border-slate-700"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
           </div>
 
           {/* Grid of Slide Thumbnails */}
@@ -86,7 +105,7 @@ export default function OverviewModal({ isOpen, onClose, currentSlide, onSelectS
           {/* Footer note */}
           <div className="mt-6 pt-4 border-t border-slate-800 flex justify-between items-center text-xs text-slate-500">
             <span>برای بستن <kbd className="px-1.5 py-0.5 bg-slate-800 border border-slate-700 text-slate-300 rounded font-mono">ESC</kbd> را فشار دهید</span>
-            <span>مجموعاً ۶ ماژول تعاملی</span>
+            <span>مجموعاً ۲۱ ماژول تعاملی</span>
           </div>
 
         </motion.div>

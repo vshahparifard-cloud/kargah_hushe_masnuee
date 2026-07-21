@@ -1,5 +1,6 @@
-import React from 'react';
-import { Sparkles, Grid, HelpCircle, Maximize2, Minimize2, Home, Play, Layers } from 'lucide-react';
+import React, { useState } from 'react';
+import { Sparkles, Grid, HelpCircle, Maximize2, Minimize2, Home, Play, Layers, FileDown, Loader2 } from 'lucide-react';
+import { generateSyllabusPdf } from '../utils/exportPdf';
 
 export default function Header({ 
   viewMode, 
@@ -11,6 +12,12 @@ export default function Header({
   isFullscreen,
   onToggleFullscreen
 }) {
+  const [isExporting, setIsExporting] = useState(false);
+
+  const handleExportPdf = () => {
+    generateSyllabusPdf((status) => setIsExporting(status));
+  };
+
   return (
     <header className="sticky top-0 z-40 w-full backdrop-blur-md bg-[#0b0f19]/80 border-b border-sky-500/10 px-4 md:px-8 py-3.5 transition-all">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -49,6 +56,21 @@ export default function Header({
               <span>اسلاید {currentSlide + 1} از {totalSlides}</span>
             </div>
           )}
+
+          {/* Export PDF Button */}
+          <button
+            onClick={handleExportPdf}
+            disabled={isExporting}
+            title="دانلود PDF سرفصل‌های کارگاه"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-sky-500/10 hover:bg-sky-500/20 text-sky-300 border border-sky-500/30 transition-all hover:border-sky-400 shadow-sm disabled:opacity-50"
+          >
+            {isExporting ? (
+              <Loader2 className="w-3.5 h-3.5 animate-spin text-sky-400" />
+            ) : (
+              <FileDown className="w-3.5 h-3.5 text-sky-400" />
+            )}
+            <span className="hidden sm:inline">{isExporting ? 'در حال تولید PDF...' : 'دانلود PDF سرفصل'}</span>
+          </button>
 
           {/* Overview Grid Button */}
           <button
