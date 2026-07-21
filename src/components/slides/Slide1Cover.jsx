@@ -5,10 +5,10 @@ import { Sparkles, Cpu, Clock, CheckCircle2 } from 'lucide-react';
 export default function Slide1Cover() {
   const highlights = [
     "مجموعه ابزارهای Google AI & Gemini 1.5/3.6",
-    "زیست‌بوم Claude & Antigravity CLI",
-    "مدیریت حافظه پنجره سیاق (Context Window)",
-    "معماری RAG و سیستم‌های چندایجنت (Multi-Agent)",
-    "زیرساخت عملیاتی API و کنترل هزینه‌ها"
+    "زیست‌بوم Claude & Antigravity CLI & Copilot",
+    "مدیریت حافظه پنجره کانتکست (Context Window)",
+    "جدول مقایسه جامع هزینه‌ها & مکانیسم چت مدل‌ها",
+    "معماری RAG و سیستم‌های چندایجنت (Multi-Agent)"
   ];
 
   return (
@@ -22,7 +22,7 @@ export default function Slide1Cover() {
       >
         <div className="flex items-center gap-2">
           <span className="px-2.5 py-1 rounded-md text-[11px] font-bold bg-sky-500/10 border border-sky-500/30 text-sky-400 font-mono">
-            اسلاید ۰۱ / ۱۴
+            اسلاید ۰۱ / ۲۱
           </span>
           <span className="text-xs text-slate-400 font-medium">افتتاحیه کارگاه و نگاه کلی</span>
         </div>
@@ -105,7 +105,7 @@ export default function Slide1Cover() {
               <span>ماژول‌های اصلی کارگاه</span>
             </h3>
             <span className="text-[10px] font-mono bg-slate-800 text-sky-300 border border-slate-700 px-2 py-0.5 rounded">
-              ۱۴ اسلاید تخصصی
+              ۲۱ اسلاید تخصصی
             </span>
           </div>
 

@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Play, Sparkles, Cpu, Bot, Code, ShieldCheck, Terminal, ArrowLeft, Clock, Layers } from 'lucide-react';
+import { Play, Sparkles, Cpu, Bot, Code, ShieldCheck, ArrowLeft, Clock } from 'lucide-react';
 
 export default function Hero({ onStart }) {
   const syllabusHighlights = [
     {
       icon: Cpu,
       title: "۱. زیست‌بوم‌ها و حافظه ۲M",
-      desc: "Google AI Suite vs Claude، حافظه پنجره سیاق ۲ میلیون توکنی و ابزارها",
+      desc: "Google AI Suite vs Claude، حافظه پنجره کانتکست (Context) ۲ میلیون توکنی و ابزارها",
       color: "from-cyan-500/20 to-blue-500/20",
       borderColor: "border-cyan-500/30",
       iconColor: "text-cyan-400"
@@ -15,7 +15,7 @@ export default function Hero({ onStart }) {
     {
       icon: Code,
       title: "۲. توسعه ایجنتیک و پرامپت",
-      desc: "مهندسی پرامپت، اشکال‌زدایی خودکار در ترمینال و پروژه‌های چندماژوله",
+      desc: "مهندسی پرامپت، Antigravity، Claude Code، اشکال‌زدایی خودکار و پروژه‌های چندماژوله",
       color: "from-blue-500/20 to-indigo-500/20",
       borderColor: "border-blue-500/30",
       iconColor: "text-blue-400"
@@ -23,7 +23,7 @@ export default function Hero({ onStart }) {
     {
       icon: ShieldCheck,
       title: "۳. زیرساخت و اقتصاد API",
-      desc: "امنیت کلیدها، Rate Limiting، محاسبه‌گر هزینه و مدیریت سهمیه‌ها",
+      desc: "امنیت کلیدها، Rate Limiting، جدول مقایسه کامل هزینه مدل‌ها و توکن‌ها",
       color: "from-indigo-500/20 to-purple-500/20",
       borderColor: "border-indigo-500/30",
       iconColor: "text-indigo-400"
@@ -31,7 +31,7 @@ export default function Hero({ onStart }) {
     {
       icon: Bot,
       title: "۴. RAG و سیستم‌های چندایجنت",
-      desc: "داده‌گاه‌های برداری، Embeddings، الگوی ReAct و شبیه‌ساز ایجنت‌ها",
+      desc: "داده‌گاه‌های برداری، Embeddings، مکانیسم چت مدل‌ها، الگوی ReAct و لابراتوار کد پایتون",
       color: "from-purple-500/20 to-sky-500/20",
       borderColor: "border-purple-500/30",
       iconColor: "text-purple-400"
@@ -55,7 +55,7 @@ export default function Hero({ onStart }) {
           className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full glass-pill mb-8 text-xs sm:text-sm font-semibold text-sky-300 border border-sky-400/30 shadow-lg shadow-sky-500/10"
         >
           <Sparkles className="w-4 h-4 text-sky-400 animate-spin" style={{ animationDuration: '6s' }} />
-          <span>کارگاه جامع و تعاملی ۶ ساعته (۱۴ ماژول تخصصی)</span>
+          <span>کارگاه جامع و تعاملی ۶ ساعته (۲۱ ماژول تخصصی)</span>
           <span className="w-1.5 h-1.5 rounded-full bg-sky-400 animate-ping" />
         </motion.div>
 
@@ -94,7 +94,7 @@ export default function Hero({ onStart }) {
           </div>
           <div className="flex items-center gap-2 px-3 py-1.5 bg-slate-900/80 border border-slate-800 rounded-xl">
             <Clock className="w-3.5 h-3.5 text-sky-400" />
-            <span className="font-mono text-xs text-sky-300">۶ ساعت کارگاه عملی + ۱۴ اسلاید</span>
+            <span className="font-mono text-xs text-sky-300">۶ ساعت کارگاه عملی + ۲۱ اسلاید</span>
           </div>
         </motion.div>
 
@@ -111,7 +111,7 @@ export default function Hero({ onStart }) {
           >
             <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <Play className="w-5 h-5 fill-white rotate-180 transition-transform group-hover:scale-110" />
-            <span>شروع ارائه اسلایدها (۱۴ بخش)</span>
+            <span>شروع ارائه اسلایدها (۲۱ بخش)</span>
             <ArrowLeft className="w-5 h-5 text-sky-200 group-hover:-translate-x-1 transition-transform" />
           </button>
         </motion.div>

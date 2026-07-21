@@ -6,29 +6,29 @@ export default function Slide2Roadmap() {
   const hours = [
     {
       hour: "ساعت ۱",
-      title: "معماری زیست‌بوم‌ها و سیاق",
+      title: "معماری زیست‌بوم‌ها و زمینه (Context)",
       topics: [
         "Google AI Suite (Gemini 1.5/3.6) vs Claude",
-        "مدیریت حافظه ۲M توکنی & Context Caching",
-        "ابزارهای توسعه: NotebookLM & Antigravity CLI"
+        "محیط توسعه ایجنتیک Antigravity CLI & MCP",
+        "مدیریت حافظه ۲M توکنی & Context Caching"
       ],
       icon: Cpu,
       color: "from-sky-500/20 to-blue-600/20 border-sky-500/40 text-sky-400"
     },
     {
       hour: "ساعت ۲",
-      title: "مهندسی پرامپت ساختاریافته",
+      title: "ابزارها و پرامپت ساختاریافته",
       topics: [
-        "مرزبندی تگ‌های XML و نقش‌ها در System Instructions",
-        "تکنیک‌های زنجیره تفکر (Chain-of-Thought)",
-        "اعتبارسنجی خروجی‌های JSON با Pydantic"
+        "Claude Code (Computer Use & Artifacts)",
+        "GitHub Copilot, Codex & NotebookLM",
+        "مرزبندی تگ‌های XML و اعتبارسنجی Pydantic"
       ],
       icon: Code,
       color: "from-blue-500/20 to-indigo-600/20 border-blue-500/40 text-blue-400"
     },
     {
       hour: "ساعت ۳",
-      title: "برنامه‌نویسی ایجنتیک & خوداصلاحی",
+      title: "توسعه ایجنتیک & خودمختاری",
       topics: [
         "ترمینال اشکال‌زدایی خودکار و تحلیل AST",
         "اصلاح خودکار خطاهای استک‌تریس در کدبیس",
@@ -39,33 +39,33 @@ export default function Slide2Roadmap() {
     },
     {
       hour: "ساعت ۴",
-      title: "زیرساخت API، امنیت & هزینه‌ها",
+      title: "زیرساخت API، قیمت‌ها & امنیت",
       topics: [
-        "خزانه‌های رمزنگاری محرمانه و پراکسی‌های سمت سرور",
-        "سهمیه‌های منطقه‌ای و Rate Limiting (Token Bucket)",
-        "ابزار محاسبه‌گر تعاملی هزینه‌ها و توکن‌های ماهانه"
+        "خزانه‌های محرمانه و پراکسی‌های سمت سرور",
+        "جدول مقایسه جامع هزینه‌ها & توکن‌های مدل‌ها",
+        "الگوریتم‌های Token Bucket و کنترل بودجه"
       ],
       icon: ShieldCheck,
       color: "from-purple-500/20 to-pink-600/20 border-purple-500/40 text-purple-400"
     },
     {
       hour: "ساعت ۵",
-      title: "بازیابی افزوده با تولید (RAG)",
+      title: "RAG & سیستم‌های چندایجنت",
       topics: [
-        "چانک‌بندی لغزان اسناد و نگاشت برداری متون",
-        "داده‌گاه‌های برداری (Qdrant, Pinecone, Chroma)",
-        "جستجوی ترکیبی (Dense + BM25) & مدل‌های Re-Ranking"
+        "مکانیسم چت LLM و محدودیت ایجنت تکین",
+        "داده‌گاه‌های برداری (Qdrant) & جستجوی ترکیبی",
+        "الگوی ReAct (Reason + Act) & Tool Calling"
       ],
       icon: Database,
       color: "from-pink-500/20 to-rose-600/20 border-pink-500/40 text-pink-400"
     },
     {
       hour: "ساعت ۶",
-      title: "معماری چندایجنت & پروژه پایانی",
+      title: "ارزیابی ابزارها & کد پایتون",
       topics: [
-        "الگوی ReAct (Reason + Act) & Tool Calling",
-        "شبیه‌ساز تعاملی همکاری چند ایجنت (MCP)",
-        "الگوهای استقرار در تولید، تلمتری و جمع‌بندی"
+        "ماتریس مقایسه‌ای Antigravity vs Claude Code",
+        "استقرار عملیاتی، تلمتری و ثبت لاگ‌ها",
+        "لابراتوار کُد عملی پایتون با FastAPI & Gemini SDK"
       ],
       icon: Bot,
       color: "from-emerald-500/20 to-teal-600/20 border-emerald-500/40 text-emerald-400"
@@ -79,7 +79,7 @@ export default function Slide2Roadmap() {
       <div className="flex items-center justify-between border-b border-slate-800/80 pb-4">
         <div>
           <span className="px-2.5 py-0.5 rounded text-[10px] font-bold bg-sky-500/10 border border-sky-500/30 text-sky-400 font-mono ml-2">
-            اسلاید ۰۲ / ۱۴
+            اسلاید ۰۲ / ۲۱
           </span>
           <span className="text-xs text-slate-400 uppercase tracking-wider font-semibold">برنامه‌ریزی کارگاه</span>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-100 mt-1">
@@ -143,7 +143,7 @@ export default function Slide2Roadmap() {
 
       {/* Slide Footer */}
       <div className="flex items-center justify-between text-xs text-slate-500 pt-4 border-t border-slate-800/60">
-        <span>نقشه راه ۶ ساعته مهندسی هوش مصنوعی</span>
+        <span>نقشه راه ۲۱ اسلایدی کارگاه مهندسی هوش مصنوعی</span>
         <span className="font-mono text-sky-400">مدرس: وحید شهپری فرد</span>
       </div>
 
