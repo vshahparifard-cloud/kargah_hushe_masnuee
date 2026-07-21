@@ -23,7 +23,7 @@ def async_retry(retries: int = 3, base_delay: float = 1.0):
                 except Exception as e:
                     if attempt == retries: raise
                     delay = base_delay * (2 ** (attempt - 1)) + random.uniform(0, 0.5)
-                    logging.warning(f"Attempt {attempt} failed: {e}. Retrying in {delay:.2f}s...")
+                    logging.warning(f"تلاش {attempt} ناموفق بود: {e}. تلاش مجدد در {delay:.2f}s...")
                     await asyncio.sleep(delay)
         return wrapper
     return decorator`;
@@ -126,7 +126,7 @@ def async_retry(retries: int = 3, base_delay: float = 1.0):
                   <span>الگوهای پرامپت‌نویسی ساختاریافته</span>
                 </h3>
                 <p className="text-xs text-slate-300 leading-relaxed">
-                  مهندسی پرامپت در سطح حرفه‌ای نیازمند تفکیک نقش‌ها، مرزبندی سیاق، و اسکیماهای خروجی تکرارپذیر است.
+                  مهندسی پرامپت در سطح حرفه‌ای نیازمند تفکیک نقش‌ها، مرزبندی زمینه (Context)، و اسکیماهای خروجی تکرارپذیر است.
                 </p>
 
                 <div className="space-y-2 text-xs">
@@ -262,9 +262,9 @@ def async_retry(retries: int = 3, base_delay: float = 1.0):
               <div className="p-3 rounded-xl bg-slate-900 border border-slate-700 w-fit mb-3">
                 <Layers className="w-5 h-5 text-sky-400" />
               </div>
-              <h3 className="text-base font-bold text-slate-100 mb-2">نقشه‌های سیاق ماژوله</h3>
+              <h3 className="text-base font-bold text-slate-100 mb-2">نقشه‌های زمینه ماژوله</h3>
               <p className="text-xs text-slate-400 leading-relaxed">
-                تقسیم کدبیس‌های بزرگ به زیرسیاق‌های مشخص (مانند احراز هویت، دیتابیس، کامپوننت‌ها) برای جلوگیری از سرریز توکن.
+                تقسیم کدبیس‌های بزرگ به زیرزمینه‌های مشخص (مانند احراز هویت، دیتابیس، کامپوننت‌ها) برای جلوگیری از سرریز زمینه.
               </p>
             </div>
 

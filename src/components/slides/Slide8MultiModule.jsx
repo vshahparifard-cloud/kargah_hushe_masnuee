@@ -5,8 +5,8 @@ import { FolderTree, Layers, Zap, CheckCircle2 } from 'lucide-react';
 export default function Slide8MultiModule() {
   const pillars = [
     {
-      title: "۱. نقشه‌برداری سیاق ماژوله",
-      desc: "تقسیم کدبیس‌های چند هزار خطی به زیرسیاق‌های مستند (auth, database, services, components) جهت جلوگیری از سرریز توکن.",
+      title: "۱. نقشه‌برداری زمینه (Context Mapping)",
+      desc: "تقسیم کدبیس‌های چند هزار خطی به زیرزمینه‌های مستند (auth, database, services, components) جهت جلوگیری از سرریز زمینه.",
       icon: Layers,
       color: "from-sky-500/20 to-blue-600/20 border-sky-500/30"
     },

@@ -9,7 +9,7 @@ export default function Slide6TechStack({ onRestart }) {
     {
       name: "Google Gemini",
       badge: "Gemini 1.5 Pro / 3.6 Flash",
-      role: "مدل پایه چندوجهی و حافظه ۲ میلیون توکنی",
+      role: "مدل پایه چندوجهی و حافظه زمینه (Context) ۲ میلیون توکنی",
       icon: Sparkles,
       color: "from-sky-500/20 to-blue-600/20 border-sky-500/30",
       accent: "text-sky-400"
@@ -138,7 +138,7 @@ export default function Slide6TechStack({ onRestart }) {
               <ul className="text-xs text-slate-300 space-y-1.5 mt-2">
                 <li className="flex items-start gap-1.5">
                   <span className="text-sky-400 font-bold">•</span>
-                  <span>بهره‌گیری از کاشینگ سیاق ۲ میلیون توکنی برای صرفه‌جویی هزینه.</span>
+                  <span>بهره‌گیری از کاشینگ زمینه ۲ میلیون توکنی برای صرفه‌جویی هزینه.</span>
                 </li>
                 <li className="flex items-start gap-1.5">
                   <span className="text-sky-400 font-bold">•</span>
@@ -184,7 +184,7 @@ export default function Slide6TechStack({ onRestart }) {
       {/* Slide Footer */}
       <div className="flex items-center justify-between text-xs text-slate-500 pt-4 border-t border-slate-800/60">
         <span>کارگاه مهندسی هوش مصنوعی و توسعه ایجنتیک</span>
-        <span className="font-mono text-sky-400">مدرس: وحید شاهپریفرد</span>
+        <span className="font-mono text-sky-400">مدرس: وحید شهپری فرد</span>
       </div>
 
     </div>

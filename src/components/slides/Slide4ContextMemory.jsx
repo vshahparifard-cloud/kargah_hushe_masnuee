@@ -14,9 +14,9 @@ export default function Slide4ContextMemory() {
           <span className="px-2.5 py-0.5 rounded text-[10px] font-bold bg-sky-500/10 border border-sky-500/30 text-sky-400 font-mono ml-2">
             اسلاید ۰۴ / ۱۴
           </span>
-          <span className="text-xs text-slate-400 uppercase tracking-wider font-semibold">ساعت ۱: معماری سیاق</span>
+          <span className="text-xs text-slate-400 uppercase tracking-wider font-semibold">ساعت ۱: معماری زمینه (Context)</span>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-100 mt-1">
-            مدیریت حافظه و پنجره سیاق (Context Window)
+            مدیریت حافظه و پنجره زمینه (Context Window)
           </h2>
         </div>
 
@@ -34,10 +34,10 @@ export default function Slide4ContextMemory() {
             <div>
               <h3 className="text-lg font-bold text-slate-100 flex items-center gap-2">
                 <Database className="w-5 h-5 text-sky-400" />
-                <span>شبیه‌ساز حافظه پنجره سیاق و بارگذاری کدبیس</span>
+                <span>شبیه‌ساز حافظه پنجره زمینه و بارگذاری کدبیس</span>
               </h3>
               <p className="text-xs text-slate-400 mt-1">
-                نحوه بارگذاری کامل اسناد، لاگ‌ها و سورس‌کد پروژه در یک پرامپت واحد بدونافت کیفیت.
+                نحوه بارگذاری کامل اسناد، لاگ‌ها و سورس‌کد پروژه در یک پرامپت واحد بدون افت کیفیت.
               </p>
             </div>
 
@@ -68,7 +68,7 @@ export default function Slide4ContextMemory() {
           {/* Visual Progress bar */}
           <div className="space-y-2">
             <div className="flex justify-between text-xs font-semibold text-slate-300">
-              <span>میزان اشغال ظرفیت پردازش سیاق</span>
+              <span>میزان اشغال ظرفیت پردازش زمینه (Context)</span>
               <span className="text-sky-400">{(contextTokens / 20).toFixed(1)}٪ از ظرفیت ۲M جمینای</span>
             </div>
 
@@ -98,7 +98,7 @@ export default function Slide4ContextMemory() {
                 <span>Context Caching</span>
               </div>
               <p className="text-slate-400 leading-relaxed">
-                ذخیره‌سازی پیشوند سیاق‌های سنگین برای کاهش ۷۵-۹۰ درصدی هزینه‌های ورودی API.
+                ذخیره‌سازی پیشوند زمینه‌های سنگین برای کاهش ۷۵-۹۰ درصدی هزینه‌های ورودی API.
               </p>
             </div>
 
@@ -118,7 +118,7 @@ export default function Slide4ContextMemory() {
 
       {/* Slide Footer */}
       <div className="flex items-center justify-between text-xs text-slate-500 pt-4 border-t border-slate-800/60">
-        <span>ساعت ۱: مدیریت سیاق و حافظه مدل‌ها</span>
+        <span>ساعت ۱: مدیریت زمینه و حافظه مدل‌ها</span>
         <span className="font-mono text-sky-400">مدرس: وحید شهپری فرد</span>
       </div>
 

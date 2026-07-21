@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles, Terminal, Code, Layers, CheckCircle2 } from 'lucide-react';
+import { Sparkles, Terminal, Code, CheckCircle2 } from 'lucide-react';
 
 export default function Slide5PromptEng() {
   const techniques = [
     {
-      title: "۱. مرزبندی تگ‌های XML",
+      title: "۱. مرزبندی زمینه (Context Fencing)",
       desc: "تفکیک دقیق دستورالعمل‌ها، داده‌های ورودی و محدوده نقش با تگ‌های <context> و <instruction> برای جلوگیری از تزریق پرامپت (Prompt Injection).",
       icon: Terminal,
       code: `<role>ارکستریتور ارشد پایتون</role>\n<context>توسعه API پرسرعت FastAPI</context>\n<instruction>دستورات اجرا...</instruction>`

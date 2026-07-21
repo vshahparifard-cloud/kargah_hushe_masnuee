@@ -241,7 +241,7 @@ export default function Slide4ApiInfra() {
               </div>
 
               <div className="p-4 rounded-xl bg-slate-900 border border-slate-800">
-                <span className="text-xs text-slate-400 block mb-1">حجم در خواست ماهانه</span>
+                <span className="text-xs text-slate-400 block mb-1">حجم درخواست ماهانه</span>
                 <span className="text-lg font-bold text-sky-400 font-mono">
                   {((requestsPerDay * 30) / 1000000).toFixed(2)}M درخواست
                 </span>
@@ -256,7 +256,7 @@ export default function Slide4ApiInfra() {
                   ${monthlyCost.toFixed(2)} / ماه
                 </span>
                 <span className="text-[10px] text-slate-400 block mt-1">
-                  با کاشینگ سیاق: <span className="text-emerald-400 font-bold">${(monthlyCost * 0.25).toFixed(2)} / ماه</span>
+                  با کاشینگ زمینه (Context Caching): <span className="text-emerald-400 font-bold">${(monthlyCost * 0.25).toFixed(2)} / ماه</span>
                 </span>
               </div>
             </div>

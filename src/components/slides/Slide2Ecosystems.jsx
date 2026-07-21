@@ -14,7 +14,7 @@ export default function Slide2Ecosystems() {
       accent: "text-sky-400",
       contextLimit: "تا ۲,۰۰۰,۰۰۰+ توکن",
       strengths: [
-        "پنجره سیاق عظیم مالتی‌مدال (ویدیو، صوت، کد)",
+        "پنجره زمینه (Context) عظیم مالتی‌مدال (ویدیو، صوت، کد)",
         "تاخیر فوق‌العاده پایین با مدل‌های Flash",
         "یکپارچگی عمیق با GCP و Vertex AI",
         "پشتیبانی نیتیو از خروجی‌های ساختاریافته JSON"
@@ -94,7 +94,7 @@ export default function Slide2Ecosystems() {
                 : 'text-slate-400 hover:text-slate-200'
             }`}
           >
-            حافظه پنجره سیاق
+            حافظه پنجره زمینه
           </button>
           <button
             onClick={() => setActiveTab('tools')}
@@ -133,7 +133,7 @@ export default function Slide2Ecosystems() {
                   </div>
 
                   <div className="mb-4 p-3 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center justify-between">
-                    <span className="text-xs text-slate-400">سقف پنجره سیاق:</span>
+                    <span className="text-xs text-slate-400">سقف پنجره زمینه (Context):</span>
                     <span className={`text-sm font-bold font-mono ${eco.accent}`}>{eco.contextLimit}</span>
                   </div>
 
@@ -168,7 +168,7 @@ export default function Slide2Ecosystems() {
               <div>
                 <h3 className="text-lg font-bold text-slate-100 flex items-center gap-2">
                   <Database className="w-5 h-5 text-sky-400" />
-                  <span>پنجره سیاق و مدیریت حافظه</span>
+                  <span>پنجره زمینه (Context Window) و مدیریت حافظه</span>
                 </h3>
                 <p className="text-xs text-slate-400 mt-1">
                   نحوه نگهداری کامل کدبیس، تاریخچه چت و اسناد در حافظه بدون افت کیفیت بازیابی.
@@ -177,7 +177,7 @@ export default function Slide2Ecosystems() {
 
               <div className="text-left dir-ltr">
                 <span className="text-2xl font-black font-mono text-sky-400">{contextTokens.toLocaleString()}K</span>
-                <span className="text-xs text-slate-400 block text-right">توکن در حافظه</span>
+                <span className="text-xs text-slate-400 block text-right font-sans">توکن در حافظه</span>
               </div>
             </div>
 
@@ -220,7 +220,7 @@ export default function Slide2Ecosystems() {
                 <p className="text-slate-400">دقت بازیابی نزدیک به ۱۰۰٪ در میان ۲ میلیون توکن سورس‌کد و اسناد.</p>
               </div>
               <div className="p-3 bg-slate-900/80 rounded-xl border border-slate-800 text-xs">
-                <div className="text-sky-400 font-bold mb-1">کاشینگ سیاق (Caching)</div>
+                <div className="text-sky-400 font-bold mb-1">کاشینگ زمینه (Caching)</div>
                 <p className="text-slate-400">بازاستفاده از توکن‌های پیشوند برای کاهش هزینه ورودی تا ۷۵-۹۰٪.</p>
               </div>
               <div className="p-3 bg-slate-900/80 rounded-xl border border-slate-800 text-xs">
