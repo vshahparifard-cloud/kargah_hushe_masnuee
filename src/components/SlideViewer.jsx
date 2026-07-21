@@ -13,13 +13,14 @@ import Slide10PromptPlayground from './slides/Slide6PromptPlayground';
 import Slide11AutoDebug from './slides/Slide3PracticalDev';
 import Slide12MultiModule from './slides/Slide8MultiModule';
 import Slide13ApiSecurity from './slides/Slide4ApiInfra';
-import Slide14CostCalculator from './slides/Slide4ApiInfra';
-import Slide15RagArch from './slides/Slide5AdvancedArch';
-import Slide16MultiAgent from './slides/Slide5AdvancedArch';
-import Slide17ToolComparison from './slides/Slide17ToolComparison';
-import Slide18ProdDeployment from './slides/Slide13ProdDeployment';
-import Slide19PracticalLab from './slides/Slide19PracticalLab';
-import Slide20TechStack from './slides/Slide6TechStack';
+import Slide14ModelPricingMatrix from './slides/Slide14ModelPricingMatrix';
+import Slide15SingleVsMultiAgent from './slides/Slide15SingleVsMultiAgent';
+import Slide16RagArch from './slides/Slide5AdvancedArch';
+import Slide17MultiAgent from './slides/Slide5AdvancedArch';
+import Slide18ToolComparison from './slides/Slide17ToolComparison';
+import Slide19ProdDeployment from './slides/Slide13ProdDeployment';
+import Slide20PracticalLab from './slides/Slide19PracticalLab';
+import Slide21TechStack from './slides/Slide6TechStack';
 
 export default function SlideViewer({ currentSlide, onRestart }) {
   
@@ -52,19 +53,21 @@ export default function SlideViewer({ currentSlide, onRestart }) {
       case 12:
         return <Slide13ApiSecurity />;
       case 13:
-        return <Slide14CostCalculator />;
+        return <Slide14ModelPricingMatrix />;
       case 14:
-        return <Slide15RagArch />;
+        return <Slide15SingleVsMultiAgent />;
       case 15:
-        return <Slide16MultiAgent />;
+        return <Slide16RagArch />;
       case 16:
-        return <Slide17ToolComparison />;
+        return <Slide17MultiAgent />;
       case 17:
-        return <Slide18ProdDeployment />;
+        return <Slide18ToolComparison />;
       case 18:
-        return <Slide19PracticalLab />;
+        return <Slide19ProdDeployment />;
       case 19:
-        return <Slide20TechStack onRestart={onRestart} />;
+        return <Slide20PracticalLab />;
+      case 20:
+        return <Slide21TechStack onRestart={onRestart} />;
       default:
         return <Slide1Cover />;
     }

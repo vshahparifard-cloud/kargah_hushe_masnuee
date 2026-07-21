@@ -19,7 +19,7 @@ export const SLIDES_DATA = [
     category: "سرفصل‌ها",
     instructor: "وحید شهپری فرد",
     hour: "ساعت ۱",
-    description: "زمان‌بندی کامل ۲۰ اسلاید کارگاه: زیست‌بوم‌ها، Antigravity، Claude Code، Copilot، NotebookLM، پرامپت‌نویسی، زیرساخت API، RAG و چندایجنت‌ها."
+    description: "زمان‌بندی کامل ۲۲ اسلاید کارگاه: زیست‌بوم‌ها، Antigravity، Claude Code، Copilot، NotebookLM، کانتکست، هزینه‌ها، RAG و چندایجنت‌ها."
   },
   {
     id: 3,
@@ -47,7 +47,7 @@ export const SLIDES_DATA = [
     id: 5,
     number: "۰۵",
     title: "زیست‌بوم Claude Code & Anthropic",
-    subtitle: "استدلال برتر، Computer Use و تگ‌های XML",
+    subtitle: "استدلال عمیق، Computer Use و تگ‌های XML",
     section: "ساعت ۲",
     category: "Claude Code",
     instructor: "وحید شهپری فرد",
@@ -63,7 +63,7 @@ export const SLIDES_DATA = [
     category: "Copilot & Codex",
     instructor: "وحید شهپری فرد",
     hour: "ساعت ۲",
-    description: "تحلیل تکمیل خودکار کد (Inline Completion)، چت با زمینه پروژه، ساخت خودکار تست‌های واحد و ایجنت‌های کدنویسی مبتنی بر مدل‌های OpenAI Codex."
+    description: "تحلیل تکمیل خودکار کد (Inline Completion)، چت با کانتکست پروژه، ساخت خودکار تست‌های واحد و ایجنت‌های کدنویسی مبتنی بر مدل‌های OpenAI Codex."
   },
   {
     id: 7,
@@ -79,13 +79,13 @@ export const SLIDES_DATA = [
   {
     id: 8,
     number: "۰۸",
-    title: "مدیریت حافظه و پنجره زمینه (Context Window)",
+    title: "مدیریت حافظه و پنجره کانتکست (Context Window)",
     subtitle: "پنجره ۲ میلیون توکنی و تکنیک‌های Caching",
     section: "ساعت ۳",
-    category: "حافظه و زمینه",
+    category: "حافظه و کانتکست",
     instructor: "وحید شهپری فرد",
     hour: "ساعت ۳",
-    description: "تحلیل بازیابی اسناد در پنجره‌های ۲M توکنی، آزمون Needle in a Haystack، تکنیک‌های Caching زمینه و استراتژی‌های خلاصه‌سازی تاریخچه."
+    description: "تحلیل بازیابی اسناد در پنجره‌های ۲M توکنی، آزمون Needle in a Haystack، تکنیک‌های Caching کانتکست و استراتژی‌های خلاصه‌سازی تاریخچه."
   },
   {
     id: 9,
@@ -96,7 +96,7 @@ export const SLIDES_DATA = [
     category: "مهندسی پرامپت",
     instructor: "وحید شهپری فرد",
     hour: "ساعت ۳",
-    description: "تفکیک نقش‌ها، مرزبندی زمینه با تگ‌های XML، تکنیک‌های زنجیره تفکر (Chain-of-Thought) و خروجی‌های ساختاریافته اعتبارسنجی‌شده با Pydantic."
+    description: "تفکیک نقش‌ها، مرزبندی کانتکست با تگ‌های XML، تکنیک‌های زنجیره تفکر (Chain-of-Thought) و خروجی‌های ساختاریافته اعتبارسنجی‌شده با Pydantic."
   },
   {
     id: 10,
@@ -129,7 +129,7 @@ export const SLIDES_DATA = [
     category: "پروژه‌های چندماژوله",
     instructor: "وحید شهپری فرد",
     hour: "ساعت ۴",
-    description: "استراتژی‌های شکستن کدبیس‌های چند هزار خطی به نقشه‌های زمینه ماژوله، آگاهی از درخت وابستگی‌ها و بازنویسی تدریجی با چانک‌های diff."
+    description: "استراتژی‌های شکستن کدبیس‌های چند هزار خطی به نقشه‌های کانتکست ماژوله، آگاهی از درخت وابستگی‌ها و بازنویسی تدریجی با چانک‌های diff."
   },
   {
     id: 13,
@@ -145,17 +145,28 @@ export const SLIDES_DATA = [
   {
     id: 14,
     number: "۱۴",
-    title: "اقتصاد توکن و محاسبه‌گر هزینه API",
-    subtitle: "کنترل بودجه و مسیریابی هوشمند بین مدل‌ها",
-    section: "ساعت ۵",
-    category: "مدیریت هزینه",
+    title: "مقایسه جامع هزینه‌ها و کانتکست مدل‌ها",
+    subtitle: "قیمت توکن ورودی/خروجی، پنجره کانتکست و تخمین هزینه",
+    section: "ساعت ۴",
+    category: "مقایسه هزینه‌ها",
     instructor: "وحید شهپری فرد",
-    hour: "ساعت ۵",
-    description: "طراحی سیستم مسیریابی درخواست‌ها بین مدل‌های اقتصادی (Flash) و مدل‌های سنگین (Pro)، همراه با محاسبه‌گر تعاملی هزینه‌ها و توکن‌های ماهانه."
+    hour: "ساعت ۴",
+    description: "جدول مقایسه‌ای کامل هزینه‌های توکن ورودی و خروجی، تخفیف Prompt Caching و سقف کانتکست مدل‌های Gemini, Claude, GPT-4o و DeepSeek."
   },
   {
     id: 15,
     number: "۱۵",
+    title: "مکانیسم چت مدل‌ها و محدودیت ایجنت تکین",
+    subtitle: "نحوه کارکرد داخلی چت هوش مصنوعی و چرایی نیاز به چندایجنت",
+    section: "ساعت ۵",
+    category: "مکانیسم چت",
+    instructor: "وحید شهپری فرد",
+    hour: "ساعت ۵",
+    description: "تحلیل Stateless بودن APIهای چت، ارسال تاریخچه پیام‌ها، محدودیت‌های ایجنت تکین (Tool Bloat, Lost in Middle) و حل آن با معماری چندایجنت."
+  },
+  {
+    id: 16,
+    number: "۱۶",
     title: "بازیابی افزوده با تولید (RAG)",
     subtitle: "داده‌گاه‌های برداری، Embeddings و بازرتبه‌بندی",
     section: "ساعت ۵",
@@ -165,8 +176,8 @@ export const SLIDES_DATA = [
     description: "چانک‌بندی لغزان اسناد، نگاشت برداری متون، پایگاه‌های داده برداری (Qdrant/Pinecone)، جستجوی ترکیبی (Dense + BM25) و مدل‌های Re-Ranking."
   },
   {
-    id: 16,
-    number: "۱۶",
+    id: 17,
+    number: "۱۷",
     title: "سیستم‌های چندایجنت (Multi-Agent)",
     subtitle: "فراخوانی ابزارها و الگوی استدلال ReAct",
     section: "ساعت ۵",
@@ -176,8 +187,8 @@ export const SLIDES_DATA = [
     description: "طراحی حلقه‌های خودمختار ReAct، فراخوانی ابزارها (Tool Calling)، پروتکل MCP و شبیه‌ساز تعاملی همکاری ایجنت‌ها (Planner, Executor, Evaluator)."
   },
   {
-    id: 17,
-    number: "۱۷",
+    id: 18,
+    number: "۱۸",
     title: "ماتریس مقایسه ابزارهای توسعه کد با AI",
     subtitle: "جدول ارزیابی تعاملی ابزارهای هوش مصنوعی توسعه‌دهندگان",
     section: "ساعت ۶",
@@ -187,8 +198,8 @@ export const SLIDES_DATA = [
     description: "مقایسه ویژگی‌ها، قدرت استدلال، سناریوهای کاربرد و سطح خودمختاری ابزارهای Antigravity CLI, Claude Code, GitHub Copilot, Codex و NotebookLM."
   },
   {
-    id: 18,
-    number: "۱۸",
+    id: 19,
+    number: "۱۹",
     title: "الگوهای استقرار در محیط واقعی (Production)",
     subtitle: "مانیتورینگ ایجنت‌ها، تلمتری و مدیریت حالت",
     section: "ساعت ۶",
@@ -198,8 +209,8 @@ export const SLIDES_DATA = [
     description: "الگوهای مانیتورینگ ایجنت‌ها، ثبت لاگ‌های ردیابی (Observability & OpenTelemetry)، مدیریت حالت جلسات کاری و جلوگیری از بن‌بست در اجرای نخ‌ها."
   },
   {
-    id: 19,
-    number: "۱۹",
+    id: 20,
+    number: "۲۰",
     title: "لابراتوار کُد و پیاده‌سازی عملی ایجنت پایتون",
     subtitle: "ساخت ایجنت کاربردی با FastAPI و Gemini SDK",
     section: "ساعت ۶",
@@ -209,8 +220,8 @@ export const SLIDES_DATA = [
     description: "پیاده‌سازی کد پایتون یک ایجنت هوشمند با قابلیت Tool Calling، مدیریت استثناها، لاگ‌های ساختاریافته و سرویس‌دهی از طریق API."
   },
   {
-    id: 20,
-    number: "۲۰",
+    id: 21,
+    number: "۲۱",
     title: "پشته فناوری تسلط‌یافته و جمع‌بندی",
     subtitle: "آموزه‌های کلیدی ۶ ساعت کارگاه و جشن پایانی",
     section: "پایانی",
