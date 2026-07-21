@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ShieldCheck, Globe, DollarSign, Activity, Lock, AlertTriangle, Cpu, Calculator, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ShieldCheck, Globe, DollarSign, Activity, Lock, Calculator, CheckCircle2 } from 'lucide-react';
 
 export default function Slide4ApiInfra() {
   const [activeTab, setActiveTab] = useState('pillars');
@@ -13,8 +13,8 @@ export default function Slide4ApiInfra() {
 
   // Pricing constants per 1M tokens
   const pricing = {
-    flash: { input: 0.075, output: 0.30, name: "Gemini 1.5 Flash (Ultra Fast)" },
-    pro: { input: 1.25, output: 5.00, name: "Gemini 1.5 Pro (Deep Reasoning)" }
+    flash: { input: 0.075, output: 0.30, name: "Gemini 1.5 Flash (فوق‌سریع)" },
+    pro: { input: 1.25, output: 5.00, name: "Gemini 1.5 Pro (استدلال عمیق)" }
   };
 
   const currentPrice = pricing[modelType];
@@ -24,43 +24,43 @@ export default function Slide4ApiInfra() {
 
   const pillars = [
     {
-      title: "1. Key Security & Vaults",
+      title: "۱. امنیت کلیدها و خزانه‌ها",
       icon: Lock,
-      desc: "Never embed secret API keys in frontend bundles or public mobile clients. Use encrypted vaults (AWS Secrets Manager, GCP Secret Manager) with transient server-side proxy handlers.",
-      badge: "Zero-Trust Architecture"
+      desc: "هرگز کلیدهای API محرمانه را در فرانت‌اند یا مشتریان موبایل قرار ندهید. از خزانه‌های رمزنگاری‌شده (GCP/AWS Secret Manager) با پراکسی‌های سمت سرور استفاده کنید.",
+      badge: "معماری Zero-Trust"
     },
     {
-      title: "2. Regional Quotas & Fallbacks",
+      title: "۲. سهمیه‌ها و پشتیبانی منطقه‌ای",
       icon: Globe,
-      desc: "API rate limits (TPM / RPM) vary by region. Deploy multi-region fallback proxies (us-central1 → us-east4 → europe-west1) with automatic circuit breaker logic.",
-      badge: "99.99% Availability"
+      desc: "محدودیت‌های نرخ API (TPM / RPM) بر اساس منطقه تفاوت دارد. پراکسی‌های چندمنطقه‌ای با لایه پشتیبان خودکار (us-central1 → us-east4 → europe-west1) پیاده‌سازی کنید.",
+      badge: "پایداری ۹۹.۹۹٪"
     },
     {
-      title: "3. Rate Limiting & Backoff",
+      title: "۳. محدودسازی نرخ و عقب‌نشینی",
       icon: Activity,
-      desc: "Implement token bucket rate limiters on gateway servers with jittered exponential backoff (e.g. initial 1s → 2s → 4s → 8s) on HTTP 429 status codes.",
+      desc: "الگوریتم‌های Token Bucket را روی سرورهای گیت‌وی با عقب‌نشینی نمایی تصادفی (Exponential Backoff with Jitter) در هنگام دریافت کد ۴۲۹ اجرا کنید.",
       badge: "Token Bucket"
     },
     {
-      title: "4. Token Economics & Caching",
+      title: "۴. اقتصاد توکن و کاشینگ",
       icon: DollarSign,
-      desc: "Route simple requests to fast/low-cost models (Gemini Flash) and reserve heavy models (Pro/Opus) for complex code tasks. Use Prompt Caching to slash input costs by up to 90%.",
-      badge: "Cost Control"
+      desc: "درخواست‌های ساده را به مدل‌های اقتصادی (Gemini Flash) هدایت کرده و مدل‌های سنگین را برای کارهای پیچیده رزرو کنید. از Prompt Caching برای کاهش ۹۰٪ هزینه‌ها بهره ببرید.",
+      badge: "کنترل هزینه"
     }
   ];
 
   return (
-    <div className="w-full h-full flex flex-col justify-between p-6 sm:p-10 relative">
+    <div className="w-full h-full flex flex-col justify-between p-6 sm:p-10 relative text-right">
       
       {/* Header Bar */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800/80 pb-4">
         <div>
-          <span className="px-2.5 py-0.5 rounded text-[10px] font-bold bg-sky-500/10 border border-sky-500/30 text-sky-400 font-mono mr-2">
-            SECTION 3
+          <span className="px-2.5 py-0.5 rounded text-[10px] font-bold bg-sky-500/10 border border-sky-500/30 text-sky-400 font-mono ml-2">
+            بخش ۳
           </span>
-          <span className="text-xs text-slate-400 uppercase tracking-wider font-semibold">Production Operations</span>
+          <span className="text-xs text-slate-400 uppercase tracking-wider font-semibold">عملیات زیرساختی</span>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-100 mt-1">
-            API Infrastructure & Management
+            زیرساخت و مدیریت APIها
           </h2>
         </div>
 
@@ -68,24 +68,24 @@ export default function Slide4ApiInfra() {
         <div className="flex items-center gap-1.5 p-1 bg-slate-900/90 border border-slate-800 rounded-xl self-start sm:self-auto">
           <button
             onClick={() => setActiveTab('pillars')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+            className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
               activeTab === 'pillars' 
                 ? 'bg-sky-500 text-slate-950 shadow-md shadow-sky-500/20' 
                 : 'text-slate-400 hover:text-slate-200'
             }`}
           >
-            4 Infrastructure Pillars
+            ۴ ستون اصلی زیرساخت
           </button>
           <button
             onClick={() => setActiveTab('calculator')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-all ${
+            className={`px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1.5 transition-all ${
               activeTab === 'calculator' 
                 ? 'bg-sky-500 text-slate-950 shadow-md shadow-sky-500/20' 
                 : 'text-slate-400 hover:text-slate-200'
             }`}
           >
             <Calculator className="w-3.5 h-3.5" />
-            <span>Cost & Token Calculator</span>
+            <span>محاسبه‌گر توکن و هزینه</span>
           </button>
         </div>
       </div>
@@ -128,7 +128,7 @@ export default function Slide4ApiInfra() {
                   </div>
 
                   <div className="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
-                    <span>Best Practice Pattern</span>
+                    <span>الگوی برتر معماری</span>
                     <CheckCircle2 className="w-4 h-4 text-sky-400" />
                   </div>
                 </div>
@@ -148,10 +148,10 @@ export default function Slide4ApiInfra() {
               <div>
                 <h3 className="text-lg font-bold text-slate-100 flex items-center gap-2">
                   <Calculator className="w-5 h-5 text-sky-400" />
-                  <span>Production Token Economics & Cost Estimator</span>
+                  <span>محاسبه‌گر اقتصاد توکن و هزینه‌های عملیاتی</span>
                 </h3>
                 <p className="text-xs text-slate-400 mt-1">
-                  Estimate monthly API cost based on daily requests, model tiering, and input/output payload sizes.
+                  تخمین هزینه ماهانه API بر اساس تعداد درخواست روزانه، سطح مدل و حجم توکن ورودی/خروجی.
                 </p>
               </div>
 
@@ -159,19 +159,19 @@ export default function Slide4ApiInfra() {
               <div className="flex items-center gap-2 bg-slate-900 p-1 rounded-xl border border-slate-800 self-start sm:self-auto">
                 <button
                   onClick={() => setModelType('flash')}
-                  className={`px-3 py-1 rounded-lg text-xs font-semibold ${
+                  className={`px-3 py-1 rounded-lg text-xs font-bold ${
                     modelType === 'flash' ? 'bg-sky-500 text-slate-950' : 'text-slate-400'
                   }`}
                 >
-                  Flash Model
+                  مدل Flash
                 </button>
                 <button
                   onClick={() => setModelType('pro')}
-                  className={`px-3 py-1 rounded-lg text-xs font-semibold ${
+                  className={`px-3 py-1 rounded-lg text-xs font-bold ${
                     modelType === 'pro' ? 'bg-sky-500 text-slate-950' : 'text-slate-400'
                   }`}
                 >
-                  Pro Model
+                  مدل Pro
                 </button>
               </div>
             </div>
@@ -181,7 +181,7 @@ export default function Slide4ApiInfra() {
               {/* Daily Requests */}
               <div className="space-y-2">
                 <div className="flex justify-between text-xs text-slate-300 font-semibold">
-                  <span>Daily API Requests</span>
+                  <span>درخواست‌های روزانه API</span>
                   <span className="text-sky-400 font-mono">{requestsPerDay.toLocaleString()}</span>
                 </div>
                 <input 
@@ -198,7 +198,7 @@ export default function Slide4ApiInfra() {
               {/* Input Tokens */}
               <div className="space-y-2">
                 <div className="flex justify-between text-xs text-slate-300 font-semibold">
-                  <span>Avg. Input Tokens / Request</span>
+                  <span>میانگین توکن ورودی / درخواست</span>
                   <span className="text-sky-400 font-mono">{avgInputTokens.toLocaleString()}</span>
                 </div>
                 <input 
@@ -215,7 +215,7 @@ export default function Slide4ApiInfra() {
               {/* Output Tokens */}
               <div className="space-y-2">
                 <div className="flex justify-between text-xs text-slate-300 font-semibold">
-                  <span>Avg. Output Tokens / Request</span>
+                  <span>میانگین توکن خروجی / درخواست</span>
                   <span className="text-sky-400 font-mono">{avgOutputTokens.toLocaleString()}</span>
                 </div>
                 <input 
@@ -233,30 +233,30 @@ export default function Slide4ApiInfra() {
             {/* Results Display */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="p-4 rounded-xl bg-slate-900 border border-slate-800">
-                <span className="text-xs text-slate-400 block mb-1">Model Selection</span>
+                <span className="text-xs text-slate-400 block mb-1">مدل انتخاب‌شده</span>
                 <span className="text-sm font-bold text-slate-100 block">{currentPrice.name}</span>
-                <span className="text-[11px] text-slate-500 font-mono mt-1 block">
+                <span className="text-[11px] text-slate-500 font-mono mt-1 block dir-ltr text-right">
                   ${currentPrice.input}/1M in • ${currentPrice.output}/1M out
                 </span>
               </div>
 
               <div className="p-4 rounded-xl bg-slate-900 border border-slate-800">
-                <span className="text-xs text-slate-400 block mb-1">Monthly Volume</span>
+                <span className="text-xs text-slate-400 block mb-1">حجم در خواست ماهانه</span>
                 <span className="text-lg font-bold text-sky-400 font-mono">
-                  {((requestsPerDay * 30) / 1000000).toFixed(2)}M Requests
+                  {((requestsPerDay * 30) / 1000000).toFixed(2)}M درخواست
                 </span>
                 <span className="text-[11px] text-slate-500 block mt-1">
-                  {(totalInputM + totalOutputM).toFixed(1)}M Total Tokens/Mo
+                  {(totalInputM + totalOutputM).toFixed(1)}M کل توکن‌ها/ماه
                 </span>
               </div>
 
               <div className="p-4 rounded-xl bg-gradient-to-br from-sky-500/20 to-blue-600/20 border border-sky-500/40">
-                <span className="text-xs text-sky-300 font-semibold block mb-1">Estimated Monthly Cost</span>
+                <span className="text-xs text-sky-300 font-semibold block mb-1">تخمین هزینه ماهانه</span>
                 <span className="text-2xl font-black text-sky-400 font-mono glow-text-cyan">
-                  ${monthlyCost.toFixed(2)} / mo
+                  ${monthlyCost.toFixed(2)} / ماه
                 </span>
                 <span className="text-[10px] text-slate-400 block mt-1">
-                  With Context Caching: <span className="text-emerald-400 font-bold">${(monthlyCost * 0.25).toFixed(2)} / mo</span>
+                  با کاشینگ سیاق: <span className="text-emerald-400 font-bold">${(monthlyCost * 0.25).toFixed(2)} / ماه</span>
                 </span>
               </div>
             </div>
@@ -267,7 +267,7 @@ export default function Slide4ApiInfra() {
 
       {/* Slide Footer */}
       <div className="flex items-center justify-between text-xs text-slate-500 pt-4 border-t border-slate-800/60">
-        <span>Section 3: API Infrastructure & Management</span>
+        <span>بخش ۳: زیرساخت و مدیریت APIها</span>
         <span className="font-mono">Vaults • Rate Limiting • Quotas • Cost Controls</span>
       </div>
 

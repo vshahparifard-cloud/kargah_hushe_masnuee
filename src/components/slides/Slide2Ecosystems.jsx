@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Layers, Cpu, Database, Wrench, CheckCircle2, ChevronRight, Zap, ArrowUpRight, Code, Terminal, FileText } from 'lucide-react';
+import { Database, CheckCircle2, ArrowUpLeft, Code, Terminal, FileText } from 'lucide-react';
 
 export default function Slide2Ecosystems() {
   const [activeTab, setActiveTab] = useState('ecosystems');
@@ -8,29 +8,29 @@ export default function Slide2Ecosystems() {
 
   const ecosystemComparison = [
     {
-      name: "Google AI Developer Suite",
+      name: "مجموعه توسعه Google AI Suite",
       badge: "Gemini 1.5 / 3.6 Pro",
       color: "from-sky-500/20 to-blue-600/20 border-sky-500/30",
       accent: "text-sky-400",
-      contextLimit: "Up to 2,000,000+ Tokens",
+      contextLimit: "تا ۲,۰۰۰,۰۰۰+ توکن",
       strengths: [
-        "Massive multimodal context (Video, Audio, Code)",
-        "Ultra-fast latency with Flash models",
-        "Deep GCP & Vertex AI integration",
-        "Native structured JSON output support"
+        "پنجره سیاق عظیم مالتی‌مدال (ویدیو، صوت، کد)",
+        "تاخیر فوق‌العاده پایین با مدل‌های Flash",
+        "یکپارچگی عمیق با GCP و Vertex AI",
+        "پشتیبانی نیتیو از خروجی‌های ساختاریافته JSON"
       ]
     },
     {
-      name: "Claude (Anthropic)",
+      name: "زیست‌بوم Claude (Anthropic)",
       badge: "Claude 3.5 Sonnet / Opus",
       color: "from-amber-500/20 to-orange-600/20 border-amber-500/30",
       accent: "text-amber-400",
-      contextLimit: "200,000 Tokens",
+      contextLimit: "۲۰۰,۰۰۰ توکن",
       strengths: [
-        "Exceptional instruction-following & nuanced code logic",
-        "Artifacts ecosystem & XML tag prompt structure",
-        "Superior reasoning for refactoring complex scripts",
-        "Computer Use & tool automation capabilities"
+        "تبعیت فوق‌العاده از دستورالعمل‌ها و منطق کد متوازن",
+        "زیست‌بوم Artifacts و ساختار پرامپت با تگ‌های XML",
+        "استدلال برتر برای بازنویسی اسکریپت‌های پیچیده",
+        "قابلیت‌های استفاده از کامپیوتر و اتوماسیون ابزار"
       ]
     }
   ];
@@ -38,39 +38,39 @@ export default function Slide2Ecosystems() {
   const prodTools = [
     {
       name: "NotebookLM",
-      role: "Knowledge Synthesis & Grounded RAG",
-      desc: "Instant AI notebook for research, document synthesis, and automated audio/text study guides.",
+      role: "سنتز دانش و RAG مستند",
+      desc: "دفترچه یادداشت هوشمند برای پژوهش، سنتز اسناد، و راهنماهای خودکار متنی و صوتی.",
       icon: FileText,
-      tag: "Research"
+      tag: "پژوهش"
     },
     {
       name: "Antigravity CLI",
-      role: "Agentic Developer Workspace",
-      desc: "Command-line autonomous coding agent with full workspace access, task scheduling, and MCP integration.",
+      role: "محیط توسعه ایجنتیک",
+      desc: "ایجنت کدنویسی خودمختار خط فرمان با دسترسی کامل به محیط، زمان‌بندی و یکپارچگی MCP.",
       icon: Terminal,
-      tag: "Agentic IDE"
+      tag: "IDE ایجنتیک"
     },
     {
       name: "Cloud Code",
-      role: "IDE Integration & Cloud Execution",
-      desc: "VS Code / JetBrains extension bridging local development with Google Cloud infrastructure.",
+      role: "یکپارچگی IDE و اجرای ابری",
+      desc: "افزونه VS Code و JetBrains برای اتصال توسعه محلی به زیرساخت ابری Google Cloud.",
       icon: Code,
-      tag: "Cloud Dev"
+      tag: "توسعه ابری"
     }
   ];
 
   return (
-    <div className="w-full h-full flex flex-col justify-between p-6 sm:p-10 relative">
+    <div className="w-full h-full flex flex-col justify-between p-6 sm:p-10 relative text-right">
       
       {/* Header Bar */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800/80 pb-4">
         <div>
-          <span className="px-2.5 py-0.5 rounded text-[10px] font-bold bg-sky-500/10 border border-sky-500/30 text-sky-400 font-mono mr-2">
-            SECTION 1
+          <span className="px-2.5 py-0.5 rounded text-[10px] font-bold bg-sky-500/10 border border-sky-500/30 text-sky-400 font-mono ml-2">
+            بخش ۱
           </span>
-          <span className="text-xs text-slate-400 uppercase tracking-wider font-semibold">Architectural Benchmarks</span>
+          <span className="text-xs text-slate-400 uppercase tracking-wider font-semibold">ارزیابی‌های معماری</span>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-100 mt-1">
-            Comparing Top AI Ecosystems
+            مقایسه برترین زیست‌بوم‌های هوش مصنوعی
           </h2>
         </div>
 
@@ -78,33 +78,33 @@ export default function Slide2Ecosystems() {
         <div className="flex items-center gap-1.5 p-1 bg-slate-900/90 border border-slate-800 rounded-xl self-start sm:self-auto">
           <button
             onClick={() => setActiveTab('ecosystems')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+            className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
               activeTab === 'ecosystems' 
                 ? 'bg-sky-500 text-slate-950 shadow-md shadow-sky-500/20' 
                 : 'text-slate-400 hover:text-slate-200'
             }`}
           >
-            Suite Comparison
+            مقایسه زیست‌بوم‌ها
           </button>
           <button
             onClick={() => setActiveTab('context')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+            className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
               activeTab === 'context' 
                 ? 'bg-sky-500 text-slate-950 shadow-md shadow-sky-500/20' 
                 : 'text-slate-400 hover:text-slate-200'
             }`}
           >
-            Context Window Memory
+            حافظه پنجره سیاق
           </button>
           <button
             onClick={() => setActiveTab('tools')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+            className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
               activeTab === 'tools' 
                 ? 'bg-sky-500 text-slate-950 shadow-md shadow-sky-500/20' 
                 : 'text-slate-400 hover:text-slate-200'
             }`}
           >
-            Production Tools
+            ابزارهای عملیاتی
           </button>
         </div>
       </div>
@@ -133,12 +133,12 @@ export default function Slide2Ecosystems() {
                   </div>
 
                   <div className="mb-4 p-3 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center justify-between">
-                    <span className="text-xs text-slate-400">Context Limit:</span>
+                    <span className="text-xs text-slate-400">سقف پنجره سیاق:</span>
                     <span className={`text-sm font-bold font-mono ${eco.accent}`}>{eco.contextLimit}</span>
                   </div>
 
                   <div className="space-y-2.5">
-                    <span className="text-xs text-slate-400 font-semibold uppercase tracking-wider block">Key Strengths:</span>
+                    <span className="text-xs text-slate-400 font-semibold uppercase tracking-wider block">نقاط قوت کلیدی:</span>
                     {eco.strengths.map((str, sIdx) => (
                       <div key={sIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
                         <CheckCircle2 className={`w-4 h-4 mt-0.5 shrink-0 ${eco.accent}`} />
@@ -149,8 +149,8 @@ export default function Slide2Ecosystems() {
                 </div>
 
                 <div className="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
-                  <span>Architectural Standard</span>
-                  <span className="font-mono text-sky-400">Enterprise Ready</span>
+                  <span>استاندارد معماری</span>
+                  <span className="font-mono text-sky-400">آماده سازمان‌ها</span>
                 </div>
               </div>
             ))}
@@ -168,25 +168,25 @@ export default function Slide2Ecosystems() {
               <div>
                 <h3 className="text-lg font-bold text-slate-100 flex items-center gap-2">
                   <Database className="w-5 h-5 text-sky-400" />
-                  <span>Context Window & Memory Management</span>
+                  <span>پنجره سیاق و مدیریت حافظه</span>
                 </h3>
                 <p className="text-xs text-slate-400 mt-1">
-                  How context windows store full codebase state, chat history, and retrieval documents without degradation.
+                  نحوه نگهداری کامل کدبیس، تاریخچه چت و اسناد در حافظه بدون افت کیفیت بازیابی.
                 </p>
               </div>
 
-              <div className="text-right">
+              <div className="text-left dir-ltr">
                 <span className="text-2xl font-black font-mono text-sky-400">{contextTokens.toLocaleString()}K</span>
-                <span className="text-xs text-slate-400 block">Tokens In Memory</span>
+                <span className="text-xs text-slate-400 block text-right">توکن در حافظه</span>
               </div>
             </div>
 
             {/* Slider control */}
             <div className="space-y-2">
               <div className="flex justify-between text-xs text-slate-400 font-mono">
-                <span>100K Tokens (Single File)</span>
-                <span>1M Tokens (Entire Repo)</span>
-                <span>2M Tokens (Gemini Max)</span>
+                <span>100K توکن (یک فایل)</span>
+                <span>1M توکن (کدبیس کامل)</span>
+                <span>2M توکن (سقف Gemini)</span>
               </div>
               <input 
                 type="range" 
@@ -202,8 +202,8 @@ export default function Slide2Ecosystems() {
             {/* Visualizer Bar */}
             <div className="space-y-2">
               <div className="flex justify-between text-xs font-semibold text-slate-300">
-                <span>Capacity Usage Visualizer</span>
-                <span className="text-sky-400">{(contextTokens / 20).toFixed(1)}% of 2M Gemini Limit</span>
+                <span>نمایشگر بصری میزان استفاده از ظرفیت</span>
+                <span className="text-sky-400">{(contextTokens / 20).toFixed(1)}٪ از سقف ۲M جمینای</span>
               </div>
 
               <div className="h-6 w-full bg-slate-900 rounded-xl overflow-hidden p-1 border border-slate-800 flex gap-1">
@@ -216,16 +216,16 @@ export default function Slide2Ecosystems() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
               <div className="p-3 bg-slate-900/80 rounded-xl border border-slate-800 text-xs">
-                <div className="text-sky-400 font-bold mb-1">Haystack Retention</div>
-                <p className="text-slate-400">Near 100% recall precision across 2 million tokens of source code & docs.</p>
+                <div className="text-sky-400 font-bold mb-1">دقت بازیابی (Haystack)</div>
+                <p className="text-slate-400">دقت بازیابی نزدیک به ۱۰۰٪ در میان ۲ میلیون توکن سورس‌کد و اسناد.</p>
               </div>
               <div className="p-3 bg-slate-900/80 rounded-xl border border-slate-800 text-xs">
-                <div className="text-sky-400 font-bold mb-1">Context Caching</div>
-                <p className="text-slate-400">Reuse prefix tokens to cut API input cost by 75-90% on repetitive prompts.</p>
+                <div className="text-sky-400 font-bold mb-1">کاشینگ سیاق (Caching)</div>
+                <p className="text-slate-400">بازاستفاده از توکن‌های پیشوند برای کاهش هزینه ورودی تا ۷۵-۹۰٪.</p>
               </div>
               <div className="p-3 bg-slate-900/80 rounded-xl border border-slate-800 text-xs">
-                <div className="text-sky-400 font-bold mb-1">Compacting Strategy</div>
-                <p className="text-slate-400">Automatic transcript summarization & sliding window for long agent runs.</p>
+                <div className="text-sky-400 font-bold mb-1">استراتژی خلاصه‌سازی</div>
+                <p className="text-slate-400">خلاصه‌سازی خودکار تاریخچه و پنجره لغزان برای اجراهای طولانی ایجنت.</p>
               </div>
             </div>
           </motion.div>
@@ -263,8 +263,8 @@ export default function Slide2Ecosystems() {
                   </div>
 
                   <div className="mt-6 pt-3 border-t border-slate-800 flex items-center justify-between text-xs text-slate-500">
-                    <span>Developer Workflow</span>
-                    <ArrowUpRight className="w-4 h-4 text-sky-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    <span>جریان کاری توسعه‌دهنده</span>
+                    <ArrowUpLeft className="w-4 h-4 text-sky-400 group-hover:-translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </div>
                 </div>
               );
@@ -276,7 +276,7 @@ export default function Slide2Ecosystems() {
 
       {/* Slide Footer */}
       <div className="flex items-center justify-between text-xs text-slate-500 pt-4 border-t border-slate-800/60">
-        <span>Section 1: AI Ecosystems & Tooling</span>
+        <span>بخش ۱: زیست‌بوم‌های هوش مصنوعی و ابزارها</span>
         <span className="font-mono">Google AI • Claude • Context Memory</span>
       </div>
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Grid, Sparkles, Check, ArrowRight } from 'lucide-react';
+import { X, Grid, Check, ArrowLeft } from 'lucide-react';
 import { SLIDES_DATA } from '../data/slidesData';
 
 export default function OverviewModal({ isOpen, onClose, currentSlide, onSelectSlide }) {
@@ -8,7 +8,7 @@ export default function OverviewModal({ isOpen, onClose, currentSlide, onSelectS
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-10 bg-slate-950/80 backdrop-blur-xl">
+      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-10 bg-slate-950/80 backdrop-blur-xl text-right">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -22,8 +22,8 @@ export default function OverviewModal({ isOpen, onClose, currentSlide, onSelectS
                 <Grid className="w-5 h-5" />
               </div>
               <div>
-                <h2 className="text-lg font-bold text-slate-100">Workshop Slide Overview</h2>
-                <p className="text-xs text-slate-400">Click any slide thumbnail to jump directly to that module.</p>
+                <h2 className="text-lg font-bold text-slate-100">نمای کلی اسلایدهای کارگاه</h2>
+                <p className="text-xs text-slate-400">برای انتقال مستقیم به هر ماژول، روی اسلاید مربوطه کلیک کنید.</p>
               </div>
             </div>
 
@@ -56,11 +56,11 @@ export default function OverviewModal({ isOpen, onClose, currentSlide, onSelectS
                   <div>
                     <div className="flex items-center justify-between mb-3">
                       <span className="text-xs font-mono font-bold px-2.5 py-0.5 rounded bg-slate-800 text-sky-400 border border-slate-700">
-                        SLIDE {slide.number}
+                        اسلاید {slide.number}
                       </span>
                       {isActive && (
                         <span className="text-[10px] font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2 py-0.5 rounded-full flex items-center gap-1">
-                          <Check className="w-3 h-3" /> Active
+                          <Check className="w-3 h-3" /> فعال
                         </span>
                       )}
                     </div>
@@ -76,7 +76,7 @@ export default function OverviewModal({ isOpen, onClose, currentSlide, onSelectS
 
                   <div className="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between text-xs text-slate-500 group-hover:text-sky-300">
                     <span>{slide.category}</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
                   </div>
                 </div>
               );
@@ -85,8 +85,8 @@ export default function OverviewModal({ isOpen, onClose, currentSlide, onSelectS
 
           {/* Footer note */}
           <div className="mt-6 pt-4 border-t border-slate-800 flex justify-between items-center text-xs text-slate-500">
-            <span>Press <kbd className="px-1.5 py-0.5 bg-slate-800 border border-slate-700 text-slate-300 rounded">ESC</kbd> to close</span>
-            <span>Total 6 Interactive Modules</span>
+            <span>برای بستن <kbd className="px-1.5 py-0.5 bg-slate-800 border border-slate-700 text-slate-300 rounded font-mono">ESC</kbd> را فشار دهید</span>
+            <span>مجموعاً ۶ ماژول تعاملی</span>
           </div>
 
         </motion.div>

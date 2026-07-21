@@ -29,14 +29,14 @@ export default function Header({
           <div>
             <div className="flex items-center gap-2">
               <h1 className="text-sm md:text-base font-bold text-slate-100 tracking-tight group-hover:text-sky-400 transition-colors">
-                AI Engineering <span className="text-sky-400 font-normal">&</span> Agentic Dev
+                مهندسی هوش مصنوعی <span className="text-sky-400 font-normal">&</span> توسعه ایجنتیک
               </h1>
               <span className="hidden sm:inline-block px-2 py-0.5 text-[10px] font-semibold bg-sky-500/10 border border-sky-500/30 text-sky-300 rounded-full">
-                6h Workshop
+                کارگاه ۶ ساعته
               </span>
             </div>
             <p className="text-[11px] text-slate-400 font-medium hidden sm:block">
-              Instructor: Vahid Shahparifard
+              مدرس: وحید شاهپریفرد
             </p>
           </div>
         </div>
@@ -44,37 +44,37 @@ export default function Header({
         {/* Action Controls */}
         <div className="flex items-center gap-2 sm:gap-3">
           {viewMode === 'presentation' && (
-            <div className="hidden md:flex items-center gap-2 bg-slate-900/80 border border-slate-800 rounded-lg px-3 py-1 text-xs text-slate-300">
+            <div className="hidden md:flex items-center gap-2 bg-slate-900/80 border border-slate-800 rounded-lg px-3 py-1 text-xs text-slate-300 font-mono">
               <Layers className="w-3.5 h-3.5 text-sky-400" />
-              <span>Slide {currentSlide + 1} of {totalSlides}</span>
+              <span>اسلاید {currentSlide + 1} از {totalSlides}</span>
             </div>
           )}
 
           {/* Overview Grid Button */}
           <button
             onClick={onToggleOverview}
-            title="Slide Overview (Press O)"
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 hover:bg-slate-700 text-slate-200 border border-slate-700/60 hover:border-sky-500/40 transition-all hover:text-sky-300"
+            title="نمای کلی اسلایدها (کلید O)"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800/80 hover:bg-slate-700 text-slate-200 border border-slate-700/60 hover:border-sky-500/40 transition-all hover:text-sky-300"
           >
             <Grid className="w-3.5 h-3.5 text-sky-400" />
-            <span className="hidden sm:inline">Overview</span>
-            <kbd className="hidden lg:inline-block text-[10px] bg-slate-900 border border-slate-700 text-slate-400 rounded px-1 ml-0.5">O</kbd>
+            <span className="hidden sm:inline">نمای کلی</span>
+            <kbd className="hidden lg:inline-block text-[10px] bg-slate-900 border border-slate-700 text-slate-400 rounded px-1.5 ml-0.5">O</kbd>
           </button>
 
           {/* Keyboard Shortcuts Button */}
           <button
             onClick={onToggleShortcuts}
-            title="Keyboard Shortcuts (Press ?)"
-            className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700/60 transition-all hover:text-sky-300"
+            title="کلیدهای میانبر (کلید ?)"
+            className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700/60 transition-all hover:text-sky-300"
           >
             <HelpCircle className="w-3.5 h-3.5 text-slate-400" />
-            <span className="hidden lg:inline">Shortcuts</span>
+            <span className="hidden lg:inline">میانبرها</span>
           </button>
 
           {/* Fullscreen Toggle */}
           <button
             onClick={onToggleFullscreen}
-            title="Toggle Fullscreen (Press F)"
+            title="حالت تمام‌صفحه (کلید F)"
             className="p-1.5 rounded-lg text-slate-400 hover:text-sky-300 bg-slate-800/80 hover:bg-slate-700 border border-slate-700/60 transition-all"
           >
             {isFullscreen ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
@@ -84,18 +84,18 @@ export default function Header({
           {viewMode === 'hero' ? (
             <button
               onClick={() => setViewMode('presentation')}
-              className="flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white shadow-lg shadow-sky-500/20 hover:shadow-sky-500/40 transition-all transform hover:-translate-y-0.5"
+              className="flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-bold bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white shadow-lg shadow-sky-500/20 hover:shadow-sky-500/40 transition-all transform hover:-translate-y-0.5"
             >
-              <Play className="w-3.5 h-3.5 fill-white" />
-              <span>Slides</span>
+              <Play className="w-3.5 h-3.5 fill-white rotate-180" />
+              <span>ارائه اسلایدها</span>
             </button>
           ) : (
             <button
               onClick={() => setViewMode('hero')}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700/60 transition-all hover:text-sky-300"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700/60 transition-all hover:text-sky-300"
             >
               <Home className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">Landing</span>
+              <span className="hidden sm:inline">صفحه اصلی</span>
             </button>
           )}
         </div>

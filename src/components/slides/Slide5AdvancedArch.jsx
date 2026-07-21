@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Bot, Database, Network, Cpu, RefreshCw, Play, CheckCircle2, ArrowRight, Sparkles, Layers, Search, Wrench } from 'lucide-react';
+import { Bot, Database, Cpu, RefreshCw, Play, CheckCircle2, ArrowLeft, Layers, Search, Wrench } from 'lucide-react';
 
 export default function Slide5AdvancedArch() {
   const [activeTab, setActiveTab] = useState('rag');
@@ -9,23 +9,23 @@ export default function Slide5AdvancedArch() {
 
   const ragPillars = [
     {
-      title: "1. Embeddings & Dense Search",
-      desc: "Convert text docs into high-dimensional vector space representations (e.g. text-embedding-004) using Cosine Similarity for semantic matching.",
+      title: "۱. نگاشت و جستجوی برداری (Embeddings)",
+      desc: "تبدیل متن به فضاهای برداری چندبعدی (مانند text-embedding-004) با استفاده از شباهت کسینوسی (Cosine Similarity) برای تطابق معنایی.",
       icon: Database
     },
     {
-      title: "2. Hybrid Search (Dense + Sparse)",
-      desc: "Combine vector embeddings (semantic meaning) with traditional BM25 keyword search to capture exact entity names and jargon.",
+      title: "۲. جستجوی ترکیبی (Dense + Sparse)",
+      desc: "ترکیب تعبیه‌های برداری (مفهوم معنایی) با جستجوی سنتی کلیدواژه‌ای BM25 برای پوشش دقیق اسامی خاص و اصطلاحات تخصصی.",
       icon: Search
     },
     {
-      title: "3. Chunking & Overlap",
-      desc: "Split documentation into 500-1000 token sliding chunks with 10% overlap to preserve context across boundary splits.",
+      title: "۳. چانک‌بندی و هم‌پوشانی",
+      desc: "تقسیم اسناد به چانک‌های لغزان ۵۰۰ تا ۱۰۰۰ توکنی با ۱۰٪ هم‌پوشانی برای حفظ سیاق در مرزهای شکست متن.",
       icon: Layers
     },
     {
-      title: "4. Re-Ranking Models",
-      desc: "Pass initial top-20 retrieved vector matches through a cross-encoder Reranker to yield top-5 high-precision groundings.",
+      title: "۴. مدل‌های بازرتبه‌بندی (Re-Ranking)",
+      desc: "عبور دادن ۲۰ تطابق اول برداری از مدل رتبه‌بندی متقاطع (Cross-Encoder) برای به دست آوردن ۵ نتیجه با بیشترین دقت موضوعی.",
       icon: Cpu
     }
   ];
@@ -33,31 +33,31 @@ export default function Slide5AdvancedArch() {
   const agentSteps = [
     {
       id: 1,
-      title: "1. User Goal Received",
-      agent: "Orchestrator Agent",
-      status: "Idle",
-      log: "Parse natural language intent: 'Deploy database schema & run migration'"
+      title: "۱. دریافت هدف کاربر",
+      agent: "ایجنت ارکستریتور",
+      status: "در انتظار",
+      log: "تحلیل قصد زبان طبیعی: 'استقرار اسکیما دیتابیس و اجرای مایگریشن'"
     },
     {
       id: 2,
-      title: "2. Thought & Tool Selection",
-      agent: "Planner Agent",
-      status: "Thinking",
-      log: "Identify tool requirements: list_dir(), view_file(), run_command('alembic upgrade head')"
+      title: "۲. استدلال و انتخاب ابزار",
+      agent: "ایجنت برنامه‌ریز",
+      status: "در حال تفکر",
+      log: "شناسایی ابزارها: list_dir(), view_file(), run_command('alembic upgrade head')"
     },
     {
       id: 3,
-      title: "3. Tool Execution & Observation",
-      agent: "Tool Executor Agent",
-      status: "Executing",
-      log: "Invoking migration runner... Command returned exit code 0."
+      title: "۳. اجرای ابزار و مشاهده",
+      agent: "ایجنت مجری ابزار",
+      status: "در حال اجرا",
+      log: "فراخوانی دستور مایگریشن... دستور با کد exit 0 پایان یافت."
     },
     {
       id: 4,
-      title: "4. Final Verification & Answer",
-      agent: "Evaluator Agent",
-      status: "Verified",
-      log: "Database schema in sync. Goal successfully accomplished!"
+      title: "۴. اعتبارسنجی نهایی و پاسخ",
+      agent: "ایجنت ارزیاب",
+      status: "تایید شده",
+      log: "اسکیمای دیتابیس کاملاً همگام شد. هدف با موفقیت محقق گردید!"
     }
   ];
 
@@ -65,26 +65,26 @@ export default function Slide5AdvancedArch() {
     setIsSimulatingAgent(true);
     setActiveAgentStep(1);
 
-    const timer2 = setTimeout(() => setActiveAgentStep(2), 1200);
-    const timer3 = setTimeout(() => setActiveAgentStep(3), 2400);
-    const timer4 = setTimeout(() => {
+    setTimeout(() => setActiveAgentStep(2), 1200);
+    setTimeout(() => setActiveAgentStep(3), 2400);
+    setTimeout(() => {
       setActiveAgentStep(4);
       setIsSimulatingAgent(false);
     }, 3600);
   };
 
   return (
-    <div className="w-full h-full flex flex-col justify-between p-6 sm:p-10 relative">
+    <div className="w-full h-full flex flex-col justify-between p-6 sm:p-10 relative text-right">
       
       {/* Header Bar */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800/80 pb-4">
         <div>
-          <span className="px-2.5 py-0.5 rounded text-[10px] font-bold bg-sky-500/10 border border-sky-500/30 text-sky-400 font-mono mr-2">
-            SECTION 4
+          <span className="px-2.5 py-0.5 rounded text-[10px] font-bold bg-sky-500/10 border border-sky-500/30 text-sky-400 font-mono ml-2">
+            بخش ۴
           </span>
-          <span className="text-xs text-slate-400 uppercase tracking-wider font-semibold">Advanced Architectures</span>
+          <span className="text-xs text-slate-400 uppercase tracking-wider font-semibold">معماری‌های پیشرفته</span>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-100 mt-1">
-            RAG & Agentic Systems
+            سیستم‌های RAG و ایجنتیک
           </h2>
         </div>
 
@@ -92,26 +92,26 @@ export default function Slide5AdvancedArch() {
         <div className="flex items-center gap-1.5 p-1 bg-slate-900/90 border border-slate-800 rounded-xl self-start sm:self-auto">
           <button
             onClick={() => setActiveTab('rag')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-all ${
+            className={`px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1.5 transition-all ${
               activeTab === 'rag' 
                 ? 'bg-sky-500 text-slate-950 shadow-md shadow-sky-500/20' 
                 : 'text-slate-400 hover:text-slate-200'
             }`}
           >
             <Database className="w-3.5 h-3.5" />
-            <span>RAG Architecture</span>
+            <span>معماری RAG</span>
           </button>
 
           <button
             onClick={() => setActiveTab('agents')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-all ${
+            className={`px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1.5 transition-all ${
               activeTab === 'agents' 
                 ? 'bg-sky-500 text-slate-950 shadow-md shadow-sky-500/20' 
                 : 'text-slate-400 hover:text-slate-200'
             }`}
           >
             <Bot className="w-3.5 h-3.5" />
-            <span>Multi-Agent Simulator</span>
+            <span>شبیه‌ساز چندایجنت</span>
           </button>
         </div>
       </div>
@@ -149,8 +149,8 @@ export default function Slide5AdvancedArch() {
                   </div>
 
                   <div className="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
-                    <span>Grounded Retrieval</span>
-                    <ArrowRight className="w-3.5 h-3.5 text-sky-400 group-hover:translate-x-0.5 transition-transform" />
+                    <span>بازیابی مبتنی بر اسناد مستند</span>
+                    <ArrowLeft className="w-3.5 h-3.5 text-sky-400 group-hover:-translate-x-0.5 transition-transform" />
                   </div>
                 </div>
               );
@@ -169,24 +169,24 @@ export default function Slide5AdvancedArch() {
               <div>
                 <h3 className="text-lg font-bold text-slate-100 flex items-center gap-2">
                   <Bot className="w-5 h-5 text-sky-400" />
-                  <span>Autonomous Multi-Agent ReAct Loop</span>
+                  <span>حلقه استدلال و عمل خودکار ReAct چندایجنت</span>
                 </h3>
                 <p className="text-xs text-slate-400 mt-1">
-                  Demonstration of tool calling, observation loops, and multi-agent coordination.
+                  نمایش عملی فراخوانی ابزارها، حلقه‌های مشاهده و هماهنگی میان ایجنت‌های تخصصی.
                 </p>
               </div>
 
               <button
                 onClick={handleRunAgentSimulation}
                 disabled={isSimulatingAgent}
-                className="flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white font-semibold text-xs shadow-lg shadow-sky-500/20 disabled:opacity-50 transition-all shrink-0 self-start sm:self-auto"
+                className="flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white font-bold text-xs shadow-lg shadow-sky-500/20 disabled:opacity-50 transition-all shrink-0 self-start sm:self-auto"
               >
                 {isSimulatingAgent ? (
                   <RefreshCw className="w-4 h-4 animate-spin" />
                 ) : (
-                  <Play className="w-4 h-4 fill-white" />
+                  <Play className="w-4 h-4 fill-white rotate-180" />
                 )}
-                <span>{isSimulatingAgent ? 'Agent Execution Running...' : 'Trigger Agent Loop'}</span>
+                <span>{isSimulatingAgent ? 'در حال اجرای ایجنت...' : 'شروع حلقه ایجنت'}</span>
               </button>
             </div>
 
@@ -209,7 +209,7 @@ export default function Slide5AdvancedArch() {
                   >
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-sky-300">
-                        Step 0{step.id}
+                        گام ۰{step.id}
                       </span>
                       {isPassed && <CheckCircle2 className="w-4 h-4 text-emerald-400" />}
                       {isActive && <span className="w-2 h-2 rounded-full bg-sky-400 animate-ping" />}
@@ -217,17 +217,17 @@ export default function Slide5AdvancedArch() {
 
                     <h4 className="text-xs font-bold text-slate-100 mb-1">{step.title}</h4>
                     <span className="text-[11px] text-sky-400 font-medium block mb-2">{step.agent}</span>
-                    <p className="text-[11px] text-slate-400 leading-tight">{step.log}</p>
+                    <p className="text-[11px] text-slate-400 leading-relaxed">{step.log}</p>
                   </div>
                 );
               })}
             </div>
 
             {/* Interactive Detail Box */}
-            <div className="bg-[#090d16] border border-slate-800 rounded-xl p-4 text-xs font-mono text-slate-300">
-              <div className="flex items-center gap-2 text-sky-400 font-semibold mb-2">
+            <div className="bg-[#090d16] border border-slate-800 rounded-xl p-4 text-xs font-mono text-slate-300 dir-ltr text-left">
+              <div className="flex items-center gap-2 text-sky-400 font-semibold mb-2 font-sans">
                 <Wrench className="w-4 h-4" />
-                <span>Tool Invocation Payload:</span>
+                <span>داده فراخوانی ابزار (Tool Invocation Payload):</span>
               </div>
               <pre className="text-slate-400 overflow-x-auto text-[11px]">
                 {`{
@@ -244,7 +244,7 @@ export default function Slide5AdvancedArch() {
 
       {/* Slide Footer */}
       <div className="flex items-center justify-between text-xs text-slate-500 pt-4 border-t border-slate-800/60">
-        <span>Section 4: RAG & Agentic Systems</span>
+        <span>بخش ۴: سیستم‌های RAG و ایجنتیک</span>
         <span className="font-mono">Embeddings • Vector DBs • Tool Calling • ReAct Loop</span>
       </div>
 

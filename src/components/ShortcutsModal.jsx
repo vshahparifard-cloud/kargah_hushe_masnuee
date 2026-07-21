@@ -1,23 +1,23 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Command, HelpCircle } from 'lucide-react';
+import { X, Command } from 'lucide-react';
 
 export default function ShortcutsModal({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   const shortcuts = [
-    { key: "→ / Space", desc: "Next slide" },
-    { key: "←", desc: "Previous slide" },
-    { key: "O", desc: "Toggle Slide Overview Grid" },
-    { key: "F", desc: "Toggle Fullscreen mode" },
-    { key: "Home", desc: "Jump to Slide 1 (Cover)" },
-    { key: "End", desc: "Jump to Slide 6 (Closing Stack)" },
-    { key: "Esc", desc: "Close Modals / Exit Fullscreen" }
+    { key: "← / Space", desc: "اسلاید بعدی" },
+    { key: "→", desc: "اسلاید قبلی" },
+    { key: "O", desc: "تغییر حالت نمای کلی اسلایدها" },
+    { key: "F", desc: "تغییر حالت تمام‌صفحه (Fullscreen)" },
+    { key: "Home", desc: "انتقال به اسلاید ۱ (کاور)" },
+    { key: "End", desc: "انتقال به اسلاید ۶ (جمع‌بندی)" },
+    { key: "Esc", desc: "بستن پنجره‌ها / خروج" }
   ];
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md">
+      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md text-right">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -27,7 +27,7 @@ export default function ShortcutsModal({ isOpen, onClose }) {
           <div className="flex items-center justify-between border-b border-slate-800 pb-3">
             <div className="flex items-center gap-2">
               <Command className="w-4 h-4 text-sky-400" />
-              <h3 className="text-base font-bold text-slate-100">Keyboard Shortcuts</h3>
+              <h3 className="text-base font-bold text-slate-100">کلیدهای میانبر کیبورد</h3>
             </div>
 
             <button
@@ -41,8 +41,8 @@ export default function ShortcutsModal({ isOpen, onClose }) {
           <div className="space-y-2.5">
             {shortcuts.map((sc, idx) => (
               <div key={idx} className="flex items-center justify-between p-2 rounded-lg bg-slate-900/80 border border-slate-800 text-xs">
-                <span className="text-slate-300 font-medium">{sc.desc}</span>
-                <kbd className="px-2 py-0.5 bg-slate-800 border border-slate-700 text-sky-300 rounded font-mono font-bold">
+                <span className="text-slate-300 font-bold">{sc.desc}</span>
+                <kbd className="px-2 py-0.5 bg-slate-800 border border-slate-700 text-sky-300 rounded font-mono font-bold dir-ltr">
                   {sc.key}
                 </kbd>
               </div>
@@ -50,7 +50,7 @@ export default function ShortcutsModal({ isOpen, onClose }) {
           </div>
 
           <div className="pt-2 border-t border-slate-800 text-center text-xs text-slate-500">
-            Click anywhere outside or press ESC to dismiss.
+            برای بستن، خارج از پنجره کلیک کنید یا کلید ESC را فشار دهید.
           </div>
         </motion.div>
       </div>

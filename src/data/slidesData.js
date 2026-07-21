@@ -1,57 +1,57 @@
 export const SLIDES_DATA = [
   {
     id: 1,
-    number: "01",
-    title: "AI Engineering & Agentic Development",
-    subtitle: "6-Hour Comprehensive Workshop & Hands-on Lab",
-    section: "Welcome",
-    category: "Overview",
-    instructor: "Vahid Shahparifard",
-    description: "Welcome & intro to modern AI engineering patterns, agentic workflows, and LLM infrastructure."
+    number: "۰۱",
+    title: "مهندسی هوش مصنوعی و توسعه ایجنتیک",
+    subtitle: "کارگاه جامع و عملی ۶ ساعته",
+    section: "خوش‌آمدگویی",
+    category: "نگاه کلی",
+    instructor: "وحید شاهپریفرد",
+    description: "مقدمه و معرفی الگوهای مدرن مهندسی هوش مصنوعی، جریان‌های کاری ایجنتیک و زیرساخت مدل‌های بزرگ زبانی."
   },
   {
     id: 2,
-    number: "02",
-    title: "Comparing Top AI Ecosystems",
-    subtitle: "Architectural Benchmarks & Developer Tooling",
-    section: "Section 1",
-    category: "Ecosystems",
-    description: "Google AI Developer Suite vs Claude (Anthropic), Context Window memory management (2M tokens vs 200k), and Production Tools (NotebookLM, Antigravity CLI, Cloud Code)."
+    number: "۰۲",
+    title: "مقایسه برترین زیست‌بوم‌های هوش مصنوعی",
+    subtitle: "ارزیابی معماری و ابزارهای توسعه‌دهندگان",
+    section: "بخش ۱",
+    category: "زیست‌بوم‌ها",
+    description: "مقایسه Google AI Developer Suite در برابر Claude، مدیریت حافظه پنجره سیاق (۲ میلیون توکن)، و ابزارهای عملیاتی (NotebookLM, Antigravity CLI, Cloud Code)."
   },
   {
     id: 3,
-    number: "03",
-    title: "AI-Driven Development",
-    subtitle: "Practical Code Generation & Engineering Workflows",
-    section: "Section 2",
-    category: "Practical Dev",
-    description: "Prompt engineering for complex scripts, automated debugging loops, self-correction, and managing large multi-module codebases."
+    number: "۰۳",
+    title: "توسعه مبتنی بر هوش مصنوعی",
+    subtitle: "تولید کد عملی و جریان‌های کاری مهندسی",
+    section: "بخش ۲",
+    category: "توسعه کاربردی",
+    description: "مهندسی پرامپت برای اسکریپت‌های پیچیده، حلقه‌های اشکال‌زدایی خودکار، خوداصلاحی کد، و مدیریت پروژه‌های چندماژوله بزرگ."
   },
   {
     id: 4,
-    number: "04",
-    title: "API Infrastructure & Management",
-    subtitle: "Production Operations, Limits & Cost Control",
-    section: "Section 3",
-    category: "API Infra",
-    description: "Securing API keys with vaults, handling regional quota limits, rate limiting algorithms, token economics, and cost management."
+    number: "۰۴",
+    title: "زیرساخت و مدیریت APIها",
+    subtitle: "عملیات تولید، محدودیت‌ها و کنترل هزینه",
+    section: "بخش ۳",
+    category: "زیرساخت API",
+    description: "امنیت کلیدهای API با خزانه‌ها، مدیریت سهمیه‌های منطقه‌ای، الگوریتم‌های محدودسازی نرخ، اقتصاد توکن و مدیریت هزینه در محیط عملیاتی."
   },
   {
     id: 5,
-    number: "05",
-    title: "RAG & Agentic Systems",
-    subtitle: "Advanced Retrieval & Autonomous Agent Loops",
-    section: "Section 4",
-    category: "Advanced Arch",
-    description: "Retrieval-Augmented Generation (Vector DBs, Embeddings) and Multi-Agent Systems (Tool Calling, autonomous reasoning, ReAct pattern)."
+    number: "۰۵",
+    title: "سیستم‌های RAG و ایجنتیک",
+    subtitle: "بازیابی پیشرفته و حلقه‌های ایجنت خودکار",
+    section: "بخش ۴",
+    category: "معماری پیشرفته",
+    description: "بازیابی افزوده با تولید RAG (پایگاه‌های داده برداری، تعبیه)، و سیستم‌های چندایجنت (فراخوانی ابزار، استدلال خودکار و الگوی ReAct)."
   },
   {
     id: 6,
-    number: "06",
-    title: "Mastered Tech Stack & Summary",
-    subtitle: "Workshop Wrap-up & Production Tooling",
-    section: "Closing",
-    category: "Tech Stack",
-    description: "Core technologies mastered: Google Gemini, Claude Code, Antigravity, Python, Vector DBs, and key architectural takeaways."
+    number: "۰۶",
+    title: "پشته فناوری تسلط‌یافته و جمع‌بندی",
+    subtitle: "جمع‌بندی کارگاه و ابزارهای عملیاتی",
+    section: "پایانی",
+    category: "پشته فناوری",
+    description: "فناوری‌های اصلی تسلط‌یافته: Google Gemini, Claude Code, Antigravity, Python, Vector DBs و آموزه‌های کلیدی معماری."
   }
 ];
