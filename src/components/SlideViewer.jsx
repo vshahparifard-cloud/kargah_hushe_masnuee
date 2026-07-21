@@ -1,11 +1,19 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Slide1Cover from './slides/Slide1Cover';
-import Slide2Ecosystems from './slides/Slide2Ecosystems';
-import Slide3PracticalDev from './slides/Slide3PracticalDev';
-import Slide4ApiInfra from './slides/Slide4ApiInfra';
-import Slide5AdvancedArch from './slides/Slide5AdvancedArch';
-import Slide6TechStack from './slides/Slide6TechStack';
+import Slide2Roadmap from './slides/Slide2Roadmap';
+import Slide3Ecosystems from './slides/Slide2Ecosystems';
+import Slide4ContextMemory from './slides/Slide4ContextMemory';
+import Slide5PromptEng from './slides/Slide5PromptEng';
+import Slide6PromptPlayground from './slides/Slide6PromptPlayground';
+import Slide7AutoDebug from './slides/Slide3PracticalDev';
+import Slide8MultiModule from './slides/Slide8MultiModule';
+import Slide9ApiSecurity from './slides/Slide4ApiInfra';
+import Slide10CostCalculator from './slides/Slide4ApiInfra';
+import Slide11RagArch from './slides/Slide5AdvancedArch';
+import Slide12MultiAgent from './slides/Slide5AdvancedArch';
+import Slide13ProdDeployment from './slides/Slide13ProdDeployment';
+import Slide14TechStack from './slides/Slide6TechStack';
 
 export default function SlideViewer({ currentSlide, onRestart }) {
   
@@ -14,15 +22,31 @@ export default function SlideViewer({ currentSlide, onRestart }) {
       case 0:
         return <Slide1Cover />;
       case 1:
-        return <Slide2Ecosystems />;
+        return <Slide2Roadmap />;
       case 2:
-        return <Slide3PracticalDev />;
+        return <Slide3Ecosystems />;
       case 3:
-        return <Slide4ApiInfra />;
+        return <Slide4ContextMemory />;
       case 4:
-        return <Slide5AdvancedArch />;
+        return <Slide5PromptEng />;
       case 5:
-        return <Slide6TechStack onRestart={onRestart} />;
+        return <Slide6PromptPlayground />;
+      case 6:
+        return <Slide7AutoDebug />;
+      case 7:
+        return <Slide8MultiModule />;
+      case 8:
+        return <Slide9ApiSecurity />;
+      case 9:
+        return <Slide10CostCalculator />;
+      case 10:
+        return <Slide11RagArch />;
+      case 11:
+        return <Slide12MultiAgent />;
+      case 12:
+        return <Slide13ProdDeployment />;
+      case 13:
+        return <Slide14TechStack onRestart={onRestart} />;
       default:
         return <Slide1Cover />;
     }

@@ -36,7 +36,7 @@ export default function Header({
               </span>
             </div>
             <p className="text-[11px] text-slate-400 font-medium hidden sm:block">
-              مدرس: وحید شاهپریفرد
+              مدرس: وحید شهپری فرد
             </p>
           </div>
         </div>
@@ -54,7 +54,7 @@ export default function Header({
           <button
             onClick={onToggleOverview}
             title="نمای کلی اسلایدها (کلید O)"
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800/80 hover:bg-slate-700 text-slate-200 border border-slate-700/60 hover:border-sky-500/40 transition-all hover:text-sky-300"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-800/80 hover:bg-slate-700 text-slate-200 border border-slate-700/60 hover:border-sky-500/40 transition-all hover:text-sky-300"
           >
             <Grid className="w-3.5 h-3.5 text-sky-400" />
             <span className="hidden sm:inline">نمای کلی</span>
@@ -65,7 +65,7 @@ export default function Header({
           <button
             onClick={onToggleShortcuts}
             title="کلیدهای میانبر (کلید ?)"
-            className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700/60 transition-all hover:text-sky-300"
+            className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-bold bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700/60 transition-all hover:text-sky-300"
           >
             <HelpCircle className="w-3.5 h-3.5 text-slate-400" />
             <span className="hidden lg:inline">میانبرها</span>

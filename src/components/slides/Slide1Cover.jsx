@@ -22,7 +22,7 @@ export default function Slide1Cover() {
       >
         <div className="flex items-center gap-2">
           <span className="px-2.5 py-1 rounded-md text-[11px] font-bold bg-sky-500/10 border border-sky-500/30 text-sky-400 font-mono">
-            اسلاید ۰۱ / ۰۶
+            اسلاید ۰۱ / ۱۴
           </span>
           <span className="text-xs text-slate-400 font-medium">افتتاحیه کارگاه و نگاه کلی</span>
         </div>
@@ -30,7 +30,7 @@ export default function Slide1Cover() {
         <div className="flex items-center gap-3 text-xs text-slate-400">
           <div className="flex items-center gap-1.5">
             <Clock className="w-3.5 h-3.5 text-sky-400" />
-            <span>مدت زمان: ۶ ساعت</span>
+            <span>مدت زمان: ۶ ساعت کامل عملی</span>
           </div>
         </div>
       </motion.div>
@@ -78,12 +78,12 @@ export default function Slide1Cover() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="flex items-center gap-4 glass-card p-4 rounded-xl border border-sky-500/20 max-w-md"
           >
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-sky-400 to-blue-600 flex items-center justify-center text-slate-900 font-bold text-lg shadow-lg shadow-sky-500/20">
+            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-sky-400 to-blue-600 flex items-center justify-center text-slate-900 font-extrabold text-lg shadow-lg shadow-sky-500/20">
               وحید
             </div>
             <div>
               <div className="text-xs text-sky-400 font-semibold uppercase tracking-wider">مدرس کارگاه</div>
-              <div className="text-base font-bold text-slate-100">وحید شاهپریفرد</div>
+              <div className="text-base font-bold text-slate-100">وحید شهپری فرد</div>
               <div className="text-xs text-slate-400">معمار ارشد هوش مصنوعی و راهبر توسعه</div>
             </div>
           </motion.div>
@@ -105,7 +105,7 @@ export default function Slide1Cover() {
               <span>ماژول‌های اصلی کارگاه</span>
             </h3>
             <span className="text-[10px] font-mono bg-slate-800 text-sky-300 border border-slate-700 px-2 py-0.5 rounded">
-              سرفصل‌ها
+              ۱۴ اسلاید تخصصی
             </span>
           </div>
 
@@ -141,7 +141,7 @@ export default function Slide1Cover() {
       {/* Footer Info */}
       <div className="flex items-center justify-between text-xs text-slate-500 pt-4 border-t border-slate-800/60">
         <span>© ۲۰۲۶ کارگاه مهندسی هوش مصنوعی</span>
-        <span>اجراشده بر روی موتور Antigravity</span>
+        <span>مدرس: وحید شهپری فرد</span>
       </div>
     </div>
   );

@@ -1,37 +1,37 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Play, Sparkles, Cpu, Bot, Code, ShieldCheck, Terminal, ArrowLeft } from 'lucide-react';
+import { Play, Sparkles, Cpu, Bot, Code, ShieldCheck, Terminal, ArrowLeft, Clock, Layers } from 'lucide-react';
 
 export default function Hero({ onStart }) {
   const syllabusHighlights = [
     {
       icon: Cpu,
-      title: "زیست‌بوم‌های هوش مصنوعی",
-      desc: "مقایسه Google AI Suite با Claude، مدیریت ۲M+ توکن حافظه و ابزارها",
+      title: "۱. زیست‌بوم‌ها و حافظه ۲M",
+      desc: "Google AI Suite vs Claude، حافظه پنجره سیاق ۲ میلیون توکنی و ابزارها",
       color: "from-cyan-500/20 to-blue-500/20",
       borderColor: "border-cyan-500/30",
       iconColor: "text-cyan-400"
     },
     {
       icon: Code,
-      title: "توسعه کاربردی با AI",
-      desc: "مهندسی پرامپت، اشکال‌زدایی خودکار و ارکستراسیون چندماژوله",
+      title: "۲. توسعه ایجنتیک و پرامپت",
+      desc: "مهندسی پرامپت، اشکال‌زدایی خودکار در ترمینال و پروژه‌های چندماژوله",
       color: "from-blue-500/20 to-indigo-500/20",
       borderColor: "border-blue-500/30",
       iconColor: "text-blue-400"
     },
     {
       icon: ShieldCheck,
-      title: "زیرساخت و امنیت API",
-      desc: "امنیت کلیدها، Rate Limiting، سهمیه‌های منطقه‌ای و بهینه‌سازی هزینه",
+      title: "۳. زیرساخت و اقتصاد API",
+      desc: "امنیت کلیدها، Rate Limiting، محاسبه‌گر هزینه و مدیریت سهمیه‌ها",
       color: "from-indigo-500/20 to-purple-500/20",
       borderColor: "border-indigo-500/30",
       iconColor: "text-indigo-400"
     },
     {
       icon: Bot,
-      title: "سیستم‌های RAG و ایجنتیک",
-      desc: "داده‌گاه‌های برداری، Embeddings، فراخوانی ابزار و حلقه‌های استدلال چندایجنت",
+      title: "۴. RAG و سیستم‌های چندایجنت",
+      desc: "داده‌گاه‌های برداری، Embeddings، الگوی ReAct و شبیه‌ساز ایجنت‌ها",
       color: "from-purple-500/20 to-sky-500/20",
       borderColor: "border-purple-500/30",
       iconColor: "text-purple-400"
@@ -55,7 +55,7 @@ export default function Hero({ onStart }) {
           className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full glass-pill mb-8 text-xs sm:text-sm font-semibold text-sky-300 border border-sky-400/30 shadow-lg shadow-sky-500/10"
         >
           <Sparkles className="w-4 h-4 text-sky-400 animate-spin" style={{ animationDuration: '6s' }} />
-          <span>کارگاه تخصصی و تعاملی ۶ ساعته</span>
+          <span>کارگاه جامع و تعاملی ۶ ساعته (۱۴ ماژول تخصصی)</span>
           <span className="w-1.5 h-1.5 rounded-full bg-sky-400 animate-ping" />
         </motion.div>
 
@@ -86,15 +86,15 @@ export default function Hero({ onStart }) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.25 }}
-          className="flex items-center justify-center gap-3 text-sm text-slate-400 mb-10"
+          className="flex flex-wrap items-center justify-center gap-3 text-sm text-slate-400 mb-10"
         >
           <div className="flex items-center gap-2 px-3.5 py-1.5 bg-slate-900/80 border border-slate-800 rounded-xl">
             <span className="text-slate-500">مدرس کارگاه:</span>
-            <span className="font-bold text-slate-100">وحید شاهپریفرد</span>
+            <span className="font-extrabold text-slate-100 text-base">وحید شهپری فرد</span>
           </div>
           <div className="flex items-center gap-2 px-3 py-1.5 bg-slate-900/80 border border-slate-800 rounded-xl">
-            <Terminal className="w-3.5 h-3.5 text-sky-400" />
-            <span className="font-mono text-xs text-sky-300">نسخه ۱.۰ ارائه</span>
+            <Clock className="w-3.5 h-3.5 text-sky-400" />
+            <span className="font-mono text-xs text-sky-300">۶ ساعت کارگاه عملی + ۱۴ اسلاید</span>
           </div>
         </motion.div>
 
@@ -111,7 +111,7 @@ export default function Hero({ onStart }) {
           >
             <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <Play className="w-5 h-5 fill-white rotate-180 transition-transform group-hover:scale-110" />
-            <span>شروع ارائه اسلایدها</span>
+            <span>شروع ارائه اسلایدها (۱۴ بخش)</span>
             <ArrowLeft className="w-5 h-5 text-sky-200 group-hover:-translate-x-1 transition-transform" />
           </button>
         </motion.div>
